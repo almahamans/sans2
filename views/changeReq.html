@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Request</title>
+    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <section style="margin-left: 20%;">
+    
+    
+    <form>
+        <section id="tableHeader" style="display: flex; flex-direction: row; text-align: center;">
+        <img src="../img/logo.jpg" width="9%" height="auto" style="border: 1px solid black;" alt="">
+<section>
+        <p class="headTP sSizeFont">Initial Safety Impact Assessment</p>
+    <table class="tableStyle">    
+        <tr>
+        <td class="cellStyle">Form NO:</td>
+        <td><input type="text" name="formNo" id="formNo" class="tableInput"></td>
+        <td class="cellStyle">Revision:</td>
+        <td><input type="text" name="revision" id="revision" class="tableInput"></td>
+        <td class="cellStyle">Issue Date:</td>
+        <td><input type="date" name="issueDate" id="issueDate" class="tableInput"></td>
+        </tr>
+    </table>
+</section>
+    </section>
+    
+   
+    <section>
+        <h4 class="veryDarkBlue">Change Request</h4> 
+        <section class="rowFlex" style="gap: 10px;">
+        <section id="icons" class="imgSecStyle">
+            <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/magnifying-glass-plus-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/pen-to-square-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/print-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/signature-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/download-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/file-excel-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth">
+        </section>
+        <table class="tableStyle tableWidth">
+            <tr>
+                <th class="cellStyle">Change ID</th>
+                <td><input type="number" name="changeid" id="changeid" class="tableInput"></td>
+            </tr>
+            <tr>
+                <th class="cellStyle">Date</th>
+                <td><input type="date" name="issueDate" id="issueDate" class="tableInput"></td>
+            </tr>    
+            <tr>
+                <th class="cellStyle">Location</th>
+                <td><input type="text" name="revision" id="revision" class="tableInput"></td>
+            </tr>    
+            <tr>    
+                <th class="cellStyle">Change description</th>
+                <td><textarea name="description" id="changeDesc" cols="20" rows="5" class="tableInput"></textarea></td>
+            </tr>
+        </table>
+    </section>
+        <section id="btns" style="float: right; margin-top: 7%; margin-right: 30%;">
+        <input type="button" value="Cancle" class="cancleBtn" onclick="window.location.href = 'main.html'">
+        <input type="button" value="Next" id="nextBtn" class="addBtn" onclick="window.location.href = 'listOfEmp.html'">
+        </section>
+    </form>
+    </section>
+</section>
+<footer>
+    <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
+</footer>
+<script src="../js/localstorage.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+.colFlex{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.rowFlex{
+    display: flex;
+    flex-direction: row;
+}
+.padd{
+    padding-top: 8rem;
+}
+.padd2{
+    padding-top: 10rem;
+}
+.padAll{
+    padding: 20px;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.inputStyle{
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 5px;
+height: 2rem;
+border: none;
+padding-left: 5%;
+}
+.inputWidth{
+ width: 10rem;   
+}
+.inputWidth2{
+    width: 20rem;   
+   }
+.dayStyle{
+width: 10rem;
+
+}
+.dayTimeStyle{
+    width: 5rem;
+    margin-left: 10px;
+}
+.textearaStyle{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 5px;
+opacity: 1;
+border: none;
+padding: 5%;
+}
+.formStyle{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 1rem;
+}
+.signInSec{
+    margin-left: 15%;
+    margin-top: 13%;
+}
+.left{
+    margin-left: 40%;
+}
+a{
+    text-decoration: none;
+}
+.medWidth{
+    width: 70%;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+}
+table, td, tr{
+    border: 1px solid black;
+    border-collapse:collapse;
+    font-size: small;
+    padding: 2%;
+}
+.cellStyle{
+    width: 15%;
+}
+.tableInput{
+    border: none;
+    width:90%;
+    padding: 5px;
+}
+.tableInput2{
+    border: none;
+    width:90%;
+    padding: 15px;
+}
+.headTP{
+    border: 1px solid black;
+    width:inherit;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding: 1%;
+    text-align: center;
+}
+.tableWidth{
+    width: 70%;
+}
+.tableWidth2{
+    width: 67%;
+}
+.imgWidth{
+    width: 15px;
+    height: 20px;
+}
+.imgSecStyle{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: max-content;
+    padding: 2px;
+}
+.svgWidth{
+    width: 50%;
+    height: 50%;
+}
+#header{
+    background-color: #EAEFF5;
+    color: #faa424;
+    padding: 1% 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 10%;
+}
+.info{
+display: grid;
+grid-template-columns: 1% 10% 10% 10% 60%;
+column-gap: 2%;
+row-gap: 20%;
+}
+#emp_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #EAEFF5;
+    color: #3896DA;
+    padding: 2%;
+    font-weight: 600;
+    font-size: medium;
+}
+.info2{
+    display: grid;
+    grid-template-columns: 2% 10% auto auto auto auto;
+    column-gap: 1%;
+    padding-top: 2%;
+    }  
+.tablePadd{
+    padding: 2%;
+}

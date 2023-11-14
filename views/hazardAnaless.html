@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazard analysis</title>
+    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <section id="tableHeader" style="display: flex; flex-direction: row; margin: auto; width: 50%;">
+        <img src="../img/logo.jpg" width="15%" height="auto" style="border: 1px solid black;" alt="">
+<section style="width: 100%;">
+        <p class="headTP sSizeFont">Initial Safety Impact Assessment</p>
+    <table style="width: inherit;">    
+        <tr>
+        <td class="cellStyle">Form NO:</td>
+        <td><p id="formNoRes" class="tableInput"></p></td>
+        <td class="cellStyle">Revision:</td>
+        <td><p id="revisionRes" class="tableInput"></p></td>
+        <td class="cellStyle">Issue Date:</td>
+        <td><p id="issueDateRes" class="tableInput"></p></td>
+        </tr>
+    </table>
+</section>
+    </section>
+
+    <h2 class="ablueColor">Hazard analysis</h2>
+    <h3 class="ablueColor">Hazard Identification</h3>
+
+    <table style="width: 100%; margin-bottom: 2%;">
+        <tr class="headerTable whiteColor">
+            <th>Hazard Id</th>
+            <th>Hazard</th>
+            <th>Hazard sequence</th>
+            <th>Hazard sequence Severity</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">Example</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">unsafe cleanes issued by ATCO</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">loss of seperation</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">seriose incedince</textarea>
+            </td>
+        </tr>
+    </table>
+    <select name="add-hazard" id="addHazard" style="width: 100%; padding: 1%; background-color: #0070C0; color: white; font-weight: 600;">
+        <option value="Add_Hazard">Add Hazard</option>
+        <option value="Hazard_One">Hazard One</option>
+        <option value="Hazard_Two">Hazard Two</option>
+        <option value="Hazard_Three">Hazard Three</option>
+        <option value="Hazard_Four">Hazard Four</option>
+        <option value="Hazard_Five">Hazard Five</option>
+    </select>
+    <h3 id="hazardId" style="text-align: center; color: #0070C0; font-size: 20px;"></h3>
+    <h3 class="ablueColor">Preventive controls assessment</h3>
+    <table style="width: 100%; margin-bottom: 2%;">
+        <tr class="headerTable whiteColor">
+            <th>Hazard Id</th>
+            <th>Thread erea</th>
+            <th>previuse control</th>
+            <th>casual factors</th>
+            <th>Mitigation</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">Example</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">ground equipment CWP</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">ATM system process flight data and presents to ATCO CWP</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">indra system incompleted with SANS equipment and unableto process data</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">the indra system design completable with survillance and flight data source used by SANS  or Dammam tower and approch services factory accessiable testing(FAT)</textarea>
+            </td>
+        </tr>
+    </table>
+    <h3 class="ablueColor">Recovery controls assessment</h3>
+    <table style="width: 100%; margin-bottom: 2%;">
+        <tr class="headerTable whiteColor">
+            <th>Hazard Id</th>
+            <th>Thread erea</th>
+            <th>recovery control</th>
+            <th>casual factors</th>
+            <th>Mitigation</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">Example</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">ATCO CWP</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">ATCO use local flight data processor at  WCP</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">ATCO not trained for local flight data system</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">the indra system design completable with survillance and flight data source used by SANS  or Dammam tower and approch services factory accessiable testing(FAT)</textarea>
+            </td>
+        </tr>
+    </table>
+    <h3 class="ablueColor">Safety Risk Decleration</h3>
+    <table style="width: inherit; margin-bottom: 2%;">
+        <tr class="headerTable whiteColor">
+            <th>Hazard Id</th>
+            <th>Hazard</th>
+            <th>Hazard consequances</th>
+            <th>Hazard consequances severity (initial)</th>
+            <th>Hazard consequances Likelihood (initial)</th>
+            <th>safety risk classfication (initial)</th>
+            <th>Hazard consequances severity (post mitigation)</th>
+            <th>Hazard consequances Likelihood (post mitigation)</th>
+            <th>safety risk classfication (post mitigation)</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="10" rows="5" style="border: none;">Example</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of ATM system</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of radar  picture or track  on CWP</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">serious incedint</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">improbably</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;">B</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">serious incedint</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">Extremely improbably</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;">C</textarea>
+            </td>
+        </tr>
+    </table>
+    <h3 class="ablueColor">Safety Requirment</h3>
+    <table style="width: 100%; margin-bottom: 2%;">
+        <tr class="headerTable whiteColor">
+            <th>SR reference</th>
+            <th>Safety Requirment</th>
+            <th>source (related hazard)</th>
+            <th>Safety Requirment Owner</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">Example</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">A training plan is required to be developed to all Dammam ATSU and Alhasa remote tower</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">H01</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">Dammam ATSU</textarea>
+            </td>
+        </tr>
+    </table>
+    <h3 class="ablueColor">Safety Risk Decleration</h3>
+    <table style="width: inherit; margin-bottom: 2%;">
+        <tr class="headerTable whiteColor">
+            <th>Hazard Id</th>
+            <th>Hazard</th>
+            <th>Hazard consequances</th>
+            <th>Hazard consequances severity (initial)</th>
+            <th>Hazard consequances Likelihood (initial)</th>
+            <th>safety risk classfication (initial)</th>
+            <th>Hazard consequances severity (post mitigation)</th>
+            <th>Hazard consequances Likelihood (post mitigation)</th>
+            <th>safety risk classfication (post mitigation)</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="10" rows="5" style="border: none;">Example</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of ATM system</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of radar  picture or track  on CWP</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">serious incedint</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">improbably</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;">B</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">serious incedint</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">Extremely improbably</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;">C</textarea>
+            </td>
+        </tr>
+    </table>
+    <h3 class="ablueColor">Safety Requirment</h3>
+    <table style="width: 100%; margin-bottom: 2%;">
+        <tr class="headerTable whiteColor">
+            <th>SR reference</th>
+            <th>Safety Requirment</th>
+            <th>source (related hazard)</th>
+            <th>Safety Requirment Owner</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">Example</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">A training plan is required to be developed to all Dammam ATSU and Alhasa remote tower</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">H01</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="30" rows="5" style="border: none;">Dammam ATSU</textarea>
+            </td>
+        </tr>
+    </table>
+    <h3 class="ablueColor">Safety Risk Decleration</h3>
+    <table style="width: inherit; margin-bottom: 2%;">
+        <tr class="headerTable whiteColor">
+            <th>Hazard Id</th>
+            <th>Hazard</th>
+            <th>Hazard consequances</th>
+            <th>Hazard consequances severity (initial)</th>
+            <th>Hazard consequances Likelihood (initial)</th>
+            <th>safety risk classfication (initial)</th>
+            <th>Hazard consequances severity (post mitigation)</th>
+            <th>Hazard consequances Likelihood (post mitigation)</th>
+            <th>safety risk classfication (post mitigation)</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="10" rows="5" style="border: none;">Example</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of ATM system</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of radar  picture or track  on CWP</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">serious incedint</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">improbably</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;">B</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">serious incedint</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;">Extremely improbably</textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;">C</textarea>
+            </td>
+        </tr>
+    </table>
+       <table>
+        <tr class="headerTable whiteColor">
+            <th>Hazard Id</th>
+            <th>Hazard</th>
+            <th>Hazard consequances</th>
+            <th>initial assessment severity</th>
+            <th>initial assessment Likelihood</th>
+            <th>initial assessment risk</th>
+            <th>preventive control</th>
+            <th>preventive mitigation</th>
+            <th>recovery control</th>
+            <th>recovery mitigation</th>
+            <th>post mitigation assessment severity</th>
+            <th>post mitigation assessment Likelihood</th>
+            <th>post mitigation assessment risk</th>
+        </tr>
+        <tr>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
+            </td>
+            <td style="padding: 0;">
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
+            </td>
+        </tr>
+    </table>
+
+    <section id="btns" style="float: right; margin-top: 7%;">
+        <button class="cancleBtn" onclick="window.location.href='changeCreteria.html'">Back</button>
+        <button class="addBtn" onclick="window.location.href='postReview.html'">Next</button>
+    </section>
+
+    <footer>
+        <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
+    </footer>
+
+    <script src="../js/hazard.js"></script>
+</body>
+</html>

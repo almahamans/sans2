@@ -1,0 +1,43 @@
+.servicesBtn{
+    width: 50%;
+    height: 5rem;
+    background-color: #1B5CA9;
+    border: none;
+    border-radius: 3%;
+    cursor: pointer;
+}
+.signInBtn{
+    width: 20rem;
+height: 2rem;
+background-color: #34A3DC;
+border: none;
+cursor: pointer;
+}
+.cancleBtn{
+    border: 1px solid #3896DA;
+border-radius: 27px;
+opacity: 1;
+background-color: white;
+color: #3896DA;
+padding: 5px 20px ;
+font-weight: 600;
+cursor: pointer;
+}
+.addBtn{
+background: #3896DA 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 27px;
+padding: 5px 20px ;
+font-weight: 600;
+color: white;
+cursor: pointer;
+}
+.lighBgBtn{
+    background: #74AED8 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 27px;
+    padding: 5px 20px ;
+    font-weight: 600;
+    color: white;
+    cursor: pointer; 
+}

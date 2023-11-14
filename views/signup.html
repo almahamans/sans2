@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/bgSignup.css">
+</head>
+<body>
+    <section class="bg-photo colFlex center">
+        <h1 class="lightblueColor">Create an account</h1>
+        <form action="post" class="formStyle">
+            <input type="number" name="id_number" id="id_number" value="ID number" placeholder="ID number" maxlength="8" class="inputStyle inputWidth2" required>
+            <input type="email" name="email" id="email" placeholder="Email" class="inputStyle inputWidth2" required>
+            <input type="tel" name="phone" id="phone" maxlength="10" placeholder="Phone number" pattern="{0-9}[10]" class="inputStyle inputWidth2" required>
+            <input type="password" name="pass" id="pass" maxlength="8" placeholder="Password" class="inputStyle inputWidth2" required>
+            <input type="password" name="pass2" id="pass2" maxlength="8" placeholder="Confirm Password" class="inputStyle inputWidth2" required>
+            <!-- <section calss="rad">
+            <label for="sqe" class="sSizeFont">Are you SQE?</label>
+            <input type="radio" name="sqe" id="yes" value="Yes">
+            <label for="yes" class="sSizeFont">Yes</label>
+            <input type="radio" name="sqe" id="no" value="No">
+            <label for="no" class="sSizeFont">No</label>
+            </section> -->
+            <input type="button" value="Sign Up" class="signInBtn sBoldSize whiteColor" onclick="window.location.href = 'login.html'">
+        </form>
+    </section>
+    <a href="login.html"><p class="sSizeFont lightblueColor left" >Sign In</p></a>
+</body>
+</html>

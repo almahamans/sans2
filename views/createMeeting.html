@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create meeting</title>
+    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <section class="colFlex center">
+        <h1 class="lightblueColor">Create Meeting</h1>
+        <form class="bgGrey medWidth rowFlex" id="meetingForm">
+
+            <span class="colFlex">
+            <label for="title" class="ablueColor label">Meeting Title:</label>
+            <input type="text" name="title" id="title" placeholder="Quality Study" class="inputStyle inputWidth">
+            </span>
+
+            <span class="colFlex">
+            <label for="day" class="ablueColor label">Day:</label>
+            <select name="select-day" id="selectDay" class="inputWidth inputStyle">
+                <option value="Sunday" selected>Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thrusday">Thrusday</option>
+            </select>
+            </span>
+
+            <span class="colFlex">
+            <label for="time" class="ablueColor label">Meeting Time:</label>
+            <span class="rowFlex">
+            <input type="time" name="time" id="time" class="inputStyle dayStyle">
+            <select name="select-dayTime" id="selectDateTime" class="dayTimeStyle inputStyle">
+            <option value="am">AM</option>
+            <option value="pm">PM</option>
+            </select>
+            </span>
+            </span> 
+
+            <span class="colFlex">
+             <label for="noOfAttend" class="ablueColor label">Number of Attendes:</label>
+            <input type="number" name="noOfAttend" id="noOfAttend" class="inputStyle inputWidth">
+            </span>
+
+           <span class="colFlex">
+            <label for="date" class="ablueColor label">Date:</label>
+            <input type="date" name="date" id="date" class="inputStyle inputWidth">
+           </span>
+
+            <span class="colFlex">
+            <label for="place" class="ablueColor label">Meeting Place:</label>
+            <input type="text" name="place" id="place" placeholder="Meeting Room" class="inputStyle inputWidth">
+            </span>
+
+            <span class="colFlex">
+            <label for="notes" class="ablueColor label">Notes</label>
+            <textarea name="notes" id="notes" cols="50" rows="10" placeholder="Write a note..." class="textearaStyle sSizeFont"></textarea>
+            </span>
+        </form>
+         <span>
+            <input type="button" value="Cancel" form="meetingForm" class="cancleBtn" onclick="window.location.href = 'receivedChanges.html'">
+            <input type="button" value="Add employees" form="meetingForm" class="addBtn" onclick="window.location.href = 'empCreateMeeting.html'">
+           </span>
+    </section>
+</body>
+</html>

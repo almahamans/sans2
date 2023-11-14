@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Meeting</title>
+    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <section style="width: 70%; margin: auto;">
+        <h2 style="color: #3896DA; text-align: center;">Create Meeting</h2>
+        <section style="display: flex; flex-direction: row; justify-content: space-between; color: #3896DA; font-size: 18px;">
+          <p>List of Employees</p>
+        <p onclick="selectAll()" style="cursor: pointer;">Sellect All</p>  
+        </section>
+        <section id="emp_header">
+            <span>Name</span>
+            <span>Email</span>
+            <span>ID number</span>
+            <span>Invitation</span>
+        </section>
+        
+        <section class="info2">
+            <svg class="svgWidth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path style="fill: white;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+            </svg>
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
+            <span>Khaled Ahmed</span>
+            <span>Khaled@gmail.com</span>
+            <span>8036997</span>
+            <section>
+                <button class="addBtn" id="selectEmpBtn1">Accept</button>
+                <button class="lighBgBtn" id="selectEmpBtn1">Assign another</button>
+            </section>
+            
+            <svg class="svgWidth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path style="fill: #12D680;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+            </svg>
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
+            <span>Rayan Ahmed</span>
+            <span>Khaled@gmail.com</span>
+            <span>8036111</span>
+            <span style="text-align: center;">
+                <input type="checkbox" name="invite" id="invite" value="Rayan Ahmed">
+            </span>
+
+            <svg class="svgWidth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path style="fill: #12D680;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+            </svg>
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
+            <span>Hadeel Mohammed</span>
+            <span>Khaled@gmail.com</span>
+            <span>807649</span>
+            <span style="text-align: center;">
+                <input type="checkbox" name="invite" id="invite" value="Hadeel Mohammed">
+            </span>
+
+            <svg class="svgWidth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path style="fill: #707070;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+            </svg>
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
+            <span>Sara Omar</span>
+            <span>Khaled@gmail.com</span>
+            <span>8039837</span>
+            <span style="text-align: center;">
+                <input type="checkbox" name="invite" id="invite" value="Sara Omar">
+            </span>
+        </section>
+        <section style="margin: 20% 0 20% 30%; float: right;">
+        <button class="cancleBtn" onclick="window.location.href = 'createMeeting.html'">Cancle</button>
+        <button class="addBtn" onclick="window.location.href = 'impactAssessment.html'">Create Meeting</button>
+    </section>
+    </section>
+    <footer>
+        <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
+    </footer>
+    <script src="../js/functions.js"></script>
+</body>
+</html>

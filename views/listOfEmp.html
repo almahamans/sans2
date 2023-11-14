@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assign safety impact assessor</title>
+    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <section style="width: 70%; margin: auto;">
+    <h2 style="color: #3896DA; text-align: center;">Assign Safety Impact Assessor</h2>
+    <section style="display: flex; flex-direction: row; justify-content: space-between; color: #3896DA; font-size: 18px;">
+      <p>List of Employees</p>
+    <p>Filter</p>  
+    </section>
+    <section id="emp_header">
+        <span>Name</span>
+        <span>Email</span>
+        <span>ID number</span>
+        <span>Invitation</span>
+    </section>
+    <section class="info2">
+        <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
+        <span>Khaled Ahmed</span>
+        <span>Khaled@gmail.com</span>
+        <span>8036997</span>
+        <span><button class="addBtn" id="selectEmpBtn1">Select</button></span>
+
+        <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
+        <span>Khaled Ahmed</span>
+        <span>Khaled@gmail.com</span>
+        <span>8036997</span>
+        <span><button class="addBtn" id="selectEmpBtn2">Select</button></span>
+    </section>
+    <section style="margin: 20% 0 20% 30%; float: right;">
+    <button class="cancleBtn" onclick="window.location.href = 'main.html'">Cancle</button>
+    <button class="addBtn" onclick="sendEmail()">Send request</button>
+</section>
+</section>
+<footer>
+    <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
+</footer>
+<script src="../js/functions.js"></script>
+</body>
+</html>

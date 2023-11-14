@@ -1,0 +1,41 @@
+.lSize{
+    font-weight: 600;
+    font-size: x-large;
+}
+.label{
+    font: normal normal bold 15px Almarai;
+}
+.radLabel{
+    font: normal normal 15px Almarai;
+}
+.medSizeFont{
+    font-size: 20px;
+}
+.sBoldSize{
+    font-size: smaller;
+    font-weight: 600;
+}
+.sSizeFont{
+    font-size: 15px;
+}
+.whiteColor{
+color: white;
+}
+.lightblueColor{
+    color: #3896DA;
+}
+.darkerBlueColor{
+    color: #005EA4;
+}
+.ablueColor{
+    color: #3896DA;
+}
+.bgGrey{
+    background-color: #EAEFF5;
+}
+.veryDarkBlue{
+    color: #0000FF;
+}
+.headerTable{
+    background-color: #548DD4;
+ } 
