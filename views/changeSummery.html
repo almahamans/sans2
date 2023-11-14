@@ -10,23 +10,23 @@
 </head>
 <body>
     <section id="tableHeader" style="display: flex; flex-direction: row; margin: auto; width: 50%;">
-        <img src="../img/logo.jpg" width="15%" height="auto" style="border: 1px solid black;" alt="">
-<section style="width: 100%;">
-        <p class="headTP sSizeFont">Initial Safety Impact Assessment</p>
-    <table style="width: inherit;">    
-        <tr>
-        <td class="cellStyle">Form NO:</td>
-        <td><p id="formNoRes" class="tableInput"></p></td>
-        <td class="cellStyle">Revision:</td>
-        <td><p id="revisionRes" class="tableInput"></p></td>
-        <td class="cellStyle">Issue Date:</td>
-        <td><p id="issueDateRes" class="tableInput"></p></td>
-        </tr>
-    </table>
-</section>
+        <img src="../img/logo.jpg" width="13%" height="10%" style="border: 1px solid black; margin-top: 12px;" alt="">
+        <section>
+                <p class="headTP sSizeFont">Initial Safety Impact Assessment</p>
+            <table class="tableStyle">    
+                <tr>
+                <td class="cellStyle">Form NO:</td>
+                <td><input type="text" name="formNo" id="formNo" class="tableInput"></td>
+                <td class="cellStyle">Revision:</td>
+                <td><input type="text" name="revision" id="revision" class="tableInput"></td>
+                <td class="cellStyle">Issue Date:</td>
+                <td><input type="date" name="issueDate" id="issueDate" class="tableInput"></td>
+                </tr>
+            </table>
+        </section>
     </section>
 
-    <h4 class="veryDarkBlue">Change Summery</h4> 
+    <h4 class="veryDarkBlue" style="margin-left: 15%; margin-top: 8%;">Change Summery</h4> 
         <section class="rowFlex" style="gap: 10px;">
         <section id="icons" class="imgSecStyle">
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
@@ -39,8 +39,7 @@
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
             <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth">
         </section>
-        <section style="display: flex; flex-direction: column; width: 100%;">
-       
+        <section style="display: flex; flex-direction: column; width: 80%; margin: auto;">
             <table class="tableStyle">
             <tr>
                 <th class="tablePadd headerTable whiteColor">Change ID</th>
@@ -92,7 +91,7 @@
     </section>
     </section>
 
-        <section id="btns" style="float: right; margin-top: 7%; margin-right: 30%;">
+        <section id="btns" style="float: right; margin-top: 7%;">
         <input type="button" value="Cancle" class="cancleBtn" onclick="window.location.href = 'main.html'">
         <input type="button" value="Next" id="nextBtn" class="addBtn" onclick="window.location.href = 'requirmentForm.html'">
         </section>

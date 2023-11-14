@@ -10,10 +10,14 @@
 </head>
 <body>
     <section id="tableHeader" style="display: flex; flex-direction: row; margin: auto; width: 50%;">
-        <img src="../img/logo.jpg" width="15%" height="auto" style="border: 1px solid black;" alt="">
-<section style="width: 100%;">
-        <p class="headTP sSizeFont">Post Operational Review Form</p>
-    <table style="width: inherit;">    
+        <img src="../img/logo.jpg" width="14%" height="10%" style="border: 1px solid black;" alt="">
+<section style="width: 100%; "> 
+    <table>
+        <tr >
+            <th style="width: 100rem; padding: 1%;">Post Operational Review Form</th>
+        </tr>
+    </table>
+    <table style="width: inherit; border-collapse: collapse;">    
         <tr>
         <td class="cellStyle">Form NO:</td>
         <td><p id="formNoRes" class="tableInput"></p></td>
@@ -25,8 +29,8 @@
     </table>
 </section>
     </section>
-    <section class="rowFlex">
-    <section id="icons" class="imgSecStyle">
+    <section class="rowFlex" style="margin-top: 2%;">
+    <section id="icons" class="imgSecStyle" >
         <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
         <img src="../icons/New folder/magnifying-glass-plus-solid.svg" class="imgWidth">
         <img src="../icons/New folder/pen-to-square-solid.svg" class="imgWidth">
@@ -37,7 +41,7 @@
         <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
         <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth">
     </section>
-    <table style="width: 80%; margin: auto;">
+    <table style="width: 60%; margin: auto;">
         <tr>
             <th class="headerTable whiteColor">Reviews (operational & Technical)</th>
             <td><input type="text" name="" id="" class="tableInput"></td>
@@ -54,10 +58,6 @@
             <th class="headerTable whiteColor">Date</th>
             <td><input type="date" name="" id="" class="tableInput"></td>
         </tr>
-    </table>
-    </section>
-
-    <table style="width: 80%; margin: auto;">
         <tr class="headerTable whiteColor">
             <th class="tablePadd">Sefety assessment details</th>
             <th class="tablePadd"></th>
@@ -87,37 +87,39 @@
             <td><input type="text" name="" id="" class="tableInput"></td>
         </tr>
     </table>
-    <table style="width: 80%; margin: auto;">
+    </section>
+    <section style="margin-top: 2%;">
+    <table style="width: 60%; margin: auto;">
         <tr class="headerTable whiteColor">
             <th class="tablePadd">Effectiveness od controls and mitigations adopted for the change:</th>
         </tr>
         <tr>
         <td>
-            <textarea name="" id="" cols="120" rows="5" style="border: none;"></textarea>
+            <textarea name="" id="" cols="80" rows="5" style="border: none;"></textarea>
         </td>
         </tr>
         </table>
-        <table style="width: 80%; margin: auto;">
+        <table style="width: 60%; margin: auto;">
         <tr class="headerTable whiteColor">
             <th class="tablePadd">Post operational review finding:</th>
         </tr>
         <tr>
         <td>
-            <textarea name="" id="" cols="120" rows="5" style="border: none;"></textarea>
+            <textarea name="" id="" cols="80" rows="5" style="border: none;"></textarea>
         </td>
         </tr>
         </table>
-        <table style="width: 80%; margin: auto;">
+        <table style="width: 60%; margin: auto;">
         <tr class="headerTable whiteColor">
             <th class="tablePadd">Safety Requirment</th>
         </tr>
         <tr>
         <td>
-            <textarea name="" id="" cols="120" rows="5" style="border: none;"></textarea>
+            <textarea name="" id="" cols="80" rows="5" style="border: none;"></textarea>
         </td>
         </tr>
     </table>
-    <table style="width: 80%; margin: auto;">
+    <table style="width: 60%; margin: auto;">
         <tr class="headerTable whiteColor">
             <th class="tablePadd">Correective activity</th>
             <td class="tablePadd"></td>
@@ -127,7 +129,7 @@
                 Reviews (operational & Technical)
             </td>
         <td>
-            <textarea name="" id="" cols="90" rows="3" style="border: none;"></textarea>
+            <textarea name="" id="" cols="50" rows="3" style="border: none;"></textarea>
         </td>
         </tr>
         <tr>
@@ -139,7 +141,7 @@
         </td>
         </tr>
     </table>
-
+</section>
     <section id="btns" style="float: right; margin-top: 7%;">
         <input type="button" value="Back" class="cancleBtn" onclick="window.location.href = 'hazardAnaless.html'">
         <input type="button" value="Next" id="nextBtn" class="addBtn" onclick="window.location.href = 'signForm.html'">
