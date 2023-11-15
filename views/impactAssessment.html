@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="../style/fonts.css">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/toggle.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script> 
+
 </head>
 <body style="font-size: 20px; font-weight: 600;">
     <section style="margin-left: 20%;">
@@ -29,7 +33,7 @@
             </table>
         </section>
             </section>
-        
+        <h1 style="display: none;">safety_impact_assessment</h1>
             <section class="rowFlex" style="gap: 10px; margin-left: -10px;">
 
                 <section id="icons" class="imgSecStyle">
@@ -41,7 +45,7 @@
                     <img src="../icons/New folder/download-solid.svg" class="imgWidth">
                     <img src="../icons/New folder/file-excel-solid.svg" class="imgWidth">
                     <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
-                    <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth" id="pdf" style="cursor: pointer;">
                 </section>
 
             <table class="tableStyle" style="width: 70%;">
@@ -59,18 +63,18 @@
                             <span class="switch-handle"></span> 
                            </label>
                     </td>
-                    <td><textarea name="" id="" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+                    <td><textarea name="" id="imp_ass_1" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
                 </tr>    
                 <tr>  
                     <td>Does the change modify what the service provides to a customer (e.g airspace users for ATM services or ATCO for tichnical service)</td>
                     <td>
                           <label class="switch">
-                            <input class="switch-input" id="switch-input2" type="checkbox" />
+                            <input class="switch-input" id="switch-input2" type="checkbox"/>
                             <span class="switch-label" data-on="Yes" data-off="No"></span> 
                             <span class="switch-handle"></span> 
                            </label>
                     </td>
-                    <td><textarea name="" id="" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+                    <td><textarea name="" id="imp_ass_2" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
                 </tr>
                 <tr>
                     <td>Does it change how the service is provided or impact an existing safety control?</td>
@@ -81,7 +85,7 @@
                             <span class="switch-handle"></span> 
                            </label>
                     </td>
-                    <td><textarea name="" id="" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+                    <td><textarea name="" id="imp_ass_3" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
                 </tr>    
                 <tr>  
                     <td>Does the change intrduce potintial new failure modes or causal factors?</td>
@@ -92,7 +96,7 @@
                             <span class="switch-handle"></span> 
                            </label>
                     </td>
-                    <td><textarea name="" id="" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+                    <td><textarea name="" id="imp_ass_4" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
                 </tr>
                 <tr>
                     <td>Does it change a system element (people, producer or equipment) that is recognised as a mitigation?</td>
@@ -103,7 +107,7 @@
                             <span class="switch-handle"></span> 
                            </label>
                     </td>
-                    <td><textarea name="" id="" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+                    <td><textarea name="" id="imp_ass_5" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
                 </tr>    
                 <tr>  
                     <td>Does the change impact/intrduce relevent cyber security threads or internal and external vulnaribility?</td>
@@ -114,7 +118,7 @@
                             <span class="switch-handle"></span> 
                            </label>
                     </td>
-                    <td><textarea name="" id="" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+                    <td><textarea name="" id="imp_ass_6" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
                 </tr>
                 <tr>
                     <td>Does the change impact any work-related fatigue factors?</td>
@@ -125,7 +129,7 @@
                             <span class="switch-handle"></span> 
                            </label>
                     </td>
-                    <td><textarea name="" id="" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+                    <td><textarea name="" id="imp_ass_7" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
                 </tr>    
                 <tr>  
                     <td>Does the change include operational or technical activities which might have impact on the live services? </td>
@@ -136,7 +140,7 @@
                             <span class="switch-handle"></span> 
                            </label>
                     </td>
-                    <td><textarea name="" id="" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+                    <td><textarea name="" id="imp_ass_8" cols="20" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
                 </tr>    
                
             </table>
@@ -150,7 +154,7 @@
                     </tr>
                     <tr>
                         <td style="width: 70%;">Based on the above, is there a safety impact as a result of this change?</td>
-                        <td class="tablePadd" id="assessment9"></td>
+                        <td class="tablePadd" id="assessment9">No</td>
                     </tr>
                 </table>
             </section>
@@ -168,5 +172,6 @@
     </footer>
 
     <script src="../js/toggle.js"></script>
+    <script src="../js/exportPdf.js"></script>
 </body>
 </html>

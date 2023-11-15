@@ -12,25 +12,8 @@
     <section style="margin-left: 20%;">
     
     <form>
-        <section id="tableHeader" style="display: flex; flex-direction: row; text-align: center;">
-            <img src="../img/logo.jpg" width="9%" height="5%" style="border: 1px solid black; margin-top: 11px;" alt="">
-<section>
-        <p class="headTP sSizeFont">Initial Safety Impact Assessment</p>
-    <table class="tableStyle">    
-        <tr>
-        <td class="cellStyle">Form NO:</td>
-        <td><input type="text" name="formNo" id="formNo" class="tableInput"></td>
-        <td class="cellStyle">Revision:</td>
-        <td><input type="text" name="revision" id="revision" class="tableInput"></td>
-        <td class="cellStyle">Issue Date:</td>
-        <td><input type="date" name="issueDate" id="issueDate" class="tableInput"></td>
-        </tr>
-    </table>
-</section>
-        </section>
-
     <section>
-        <h4 class="veryDarkBlue">Change Request</h4> 
+        <h1 class="veryDarkBlue" style="margin-left: 30%;">Change Request</h1>  
         <section class="rowFlex" style="gap: 10px;">
 
         <table class="tableStyle tableWidth">
@@ -61,6 +44,22 @@
 <footer>
     <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
 </footer>
-<script src="../js/localstorage.js"></script>
+<script>
+    //     let changeId2 = document.getElementById('changeid2');
+    // let issueDate2 = document.getElementById('issueDate2');
+    // let revision2 = document.getElementById('revision2');
+    // let changeDesc2 = document.getElementById('changeDesc2');
+    
+    // let chId = localStorage.getItem('changeid')
+    // let issDa = localStorage.getItem('issueDate')
+    // let revi = localStorage.getItem('revision')
+    // let chDes = localStorage.getItem('changeDesc')
+    
+    document.getElementById('changeid2').innerHTML= sessionStorage['changeid']
+    document.getElementById('issueDate2').innerHTML= sessionStorage['issueDate']
+    document.getElementById('revision2').innerHTML= sessionStorage['revision']
+    document.getElementById('changeDesc2').innerHTML= sessionStorage['changeDesc']
+</script>
+
 </body>
 </html>

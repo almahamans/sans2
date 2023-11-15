@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../style/button.css">
     <link rel="stylesheet" href="../style/fonts.css">
     <link rel="stylesheet" href="../style/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script> 
+
 </head>
 <body>
     <section id="tableHeader" style="display: flex; flex-direction: row; margin: auto; width: 50%;">
@@ -26,7 +30,7 @@
         </section>
     </section>
 
-    <h4 class="veryDarkBlue" style="margin-left: 15%; margin-top: 8%;">Change Summery</h4> 
+    <h1 class="veryDarkBlue" style="margin-left: 15%; margin-top: 8%; font-size: 25px;">Change Summery</h1> 
         <section class="rowFlex" style="gap: 10px;">
         <section id="icons" class="imgSecStyle">
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
@@ -37,13 +41,13 @@
             <img src="../icons/New folder/download-solid.svg" class="imgWidth">
             <img src="../icons/New folder/file-excel-solid.svg" class="imgWidth">
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth">
+            <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth" id="pdf" style="cursor: pointer;">
         </section>
         <section style="display: flex; flex-direction: column; width: 80%; margin: auto;">
-            <table class="tableStyle">
+            <table style="margin-bottom: 3%;" >
             <tr>
                 <th class="tablePadd headerTable whiteColor">Change ID</th>
-                <td><input type="text" class="tableInput" value="ISIA-SC-MED-001-2023-Jed"></td>
+                <td><input type="text" class="tableInput"></td>
             </tr>
             </table>
             <table class="tableStyle">
@@ -51,13 +55,13 @@
                 <th class="headerTable whiteColor tablePadd">proposed change descrption:</th>
             </tr> 
             <tr>
-                <td><textarea name="" id="" cols="100" rows="5" style="border: none;">performing quarterly PMI for (ALBAHA) MSSR as described in SANS operation and maintenance</textarea></td>
+                <td><textarea name="" id="" cols="100" rows="5" style="border: none;"></textarea></td>
             </tr>   
             <tr>
                 <th class="tablePadd headerTable whiteColor">scope of the change:</th>
             </tr>    
             <tr>    
-                <td><textarea cols="50" rows="5" class="tableInput">PMI for ALBAHA MSSR</textarea></td>
+                <td><textarea cols="50" rows="5" class="tableInput"></textarea></td>
             </tr>
             <tr>
                 <th class="tablePadd headerTable whiteColor">change plan:</th>
@@ -75,16 +79,16 @@
                     <th>End</th>
                 </tr>
                 <tr>
-                    <td><textarea name="" id="" cols="40" rows="4" style="border: none;">Coordinate with KAIA SMC to inform  and coordinates with jeddah ATM unit to conduct activity plan briefing session</textarea></td>
-                    <td><textarea name="" id="" cols="20" rows="4" style="border: none;">WPS/Techs Albaha Unit</textarea></td>
-                    <td style="padding: 5px;"><textarea name="" id="" cols="5" rows="4" style="border: none;">7:30</textarea></td>
-                    <td style="padding: 5px;"><textarea name="" id="" cols="5" rows="4" style="border: none;">8:00</textarea></td>
+                    <td><textarea name="" id="" cols="40" rows="4" style="border: none;"></textarea></td>
+                    <td><textarea name="" id="" cols="20" rows="4" style="border: none;"></textarea></td>
+                    <td style="padding: 5px;"><textarea name="" id="" cols="5" rows="4" style="border: none;"></textarea></td>
+                    <td style="padding: 5px;"><textarea name="" id="" cols="5" rows="4" style="border: none;"></textarea></td>
                 </tr>
                 <tr>
-                    <td><textarea name="" id="" cols="40" rows="4" style="border: none;">SMC to insure Afif & ALsoudah radars are ready to be used</textarea></td>
-                    <td><textarea name="" id="" cols="20" rows="4" style="border: none;">WPS/Techs Albaha Unit</textarea></td>
-                    <td style="padding: 5px;"><textarea name="" id="" cols="5" rows="4" style="border: none;">6:00</textarea></td>
-                    <td style="padding: 5px;"><textarea name="" id="" cols="5" rows="4" style="border: none;">6:30</textarea></td>
+                    <td><textarea name="" id="" cols="40" rows="4" style="border: none;"></textarea></td>
+                    <td><textarea name="" id="" cols="20" rows="4" style="border: none;"></textarea></td>
+                    <td style="padding: 5px;"><textarea name="" id="" cols="5" rows="4" style="border: none;"></textarea></td>
+                    <td style="padding: 5px;"><textarea name="" id="" cols="5" rows="4" style="border: none;"></textarea></td>
                 </tr>
             </tr>
         </table>
@@ -93,7 +97,7 @@
 
         <section id="btns" style="float: right; margin-top: 7%;">
         <input type="button" value="Cancle" class="cancleBtn" onclick="window.location.href = 'main.html'">
-        <input type="button" value="Next" id="nextBtn" class="addBtn" onclick="window.location.href = 'requirmentForm.html'">
+        <input type="button" value="Next" id="nextBtn" class="addBtn" onclick="window.location.href = 'impactAssessment.html'">
         </section>
 
     </section>
@@ -102,5 +106,7 @@
 <footer>
     <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
 </footer>
+
+<script src="../js/exportPdf.js"></script>
 </body>
 </html>

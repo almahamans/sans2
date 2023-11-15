@@ -12,18 +12,24 @@
 <body>
     <img src="../img/logo.jpg" alt="" width="10%" height="auto" style="margin: 0 0 -10% 5%;">
     <section class="signInSec">
-        <h1 class="lightblueColor">Welcome</h1>
-        <h3 class="darkerBlueColor">Sign in with your Email</h3>
+        <h1 class="lightblueColor" style="margin-left: 1%;">Welcome</h1>
+        
+        <h3 class="darkerBlueColor" style="margin-left: -2.5%;">Sign in with your Email</h3>
+        <br>
+        <section style="margin-left: -5%;">
         <form method="get" class="formStyle">
             <label for="email" class="label lightblueColor">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email" class="inputStyle inputWidth2">
+            <input type="email" id="email" placeholder="Email" class="inputStyle inputWidth2">
             <label for="pass" class="label lightblueColor">Password</label>
             <input type="password" name="pass" id="pass" placeholder="Password" class="inputStyle inputWidth2">
             <input type="button" value="Sign in" class="signInBtn sBoldSize whiteColor" onclick="window.location.href = 'main.html'">
         </form>
+        </section>
         <p class="lightblueColor sSizeFont" onclick="window.location.href = 'forgetPass.html'">Forget your password?</p>
         <a href="signup.html"><p class="lightblueColor sSizeFont">Sign up</p></a>
     </section>
-    
+    <script>
+        document.getElementById('email').innerHTML = localStorage['email']
+    </script>
 </body>
 </html>

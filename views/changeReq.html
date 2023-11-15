@@ -8,31 +8,14 @@
     <link rel="stylesheet" href="../style/fonts.css">
     <link rel="stylesheet" href="../style/style.css">
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"> </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script> 
 
 </head>
 <body>
-    <section style="margin-left: 20%;" id="contentToPrint"> 
+    <section style="margin-left: 20%; margin-top: 5%;" id="contentToPrint"> 
     <form>
-        <section id="tableHeader" style="display: flex; flex-direction: row; text-align: center;">
-        <img src="../img/logo.jpg" width="9%" height="5%" style="border: 1px solid black; margin-top: 11px;" alt="">
-<section>
-        <p class="headTP sSizeFont">Initial Safety Impact Assessment</p>
-    <table class="tableStyle">    
-        <tr>
-        <td class="cellStyle">Form NO:</td>
-        <td><input type="text" name="formNo" id="formNo" class="tableInput"></td>
-        <td class="cellStyle">Revision:</td>
-        <td><input type="text" name="revision" id="revision" class="tableInput"></td>
-        <td class="cellStyle">Issue Date:</td>
-        <td><input type="date" name="issueDate" id="issueDate" class="tableInput"></td>
-        </tr>
-    </table>
-</section>
-    </section>
-    
-        <h4 class="veryDarkBlue">Change Request</h4> 
+        <h1 class="veryDarkBlue" id="subject" style="margin-left: 30%;">Change Request</h1> 
         <section class="rowFlex" style="gap: 10px;">
         <section id="icons" class="imgSecStyle">
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
@@ -45,22 +28,25 @@
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
             <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth" id="pdf" style="cursor: pointer;">
         </section>
-        <table class="tableStyle tableWidth">
+        <table id="table" class="tableStyle tableWidth">
             <tr>
                 <th class="cellStyle">Change ID</th>
-                <td><input type="number" name="changeid" id="changeid" class="tableInput"></td>
+                <td><input type="text" id="changeid" class="tableInput"></td>
             </tr>
             <tr>
                 <th class="cellStyle">Date</th>
-                <td><input type="date" name="issueDate" id="issueDate" class="tableInput"></td>
+                <td><input type="date" id="issueDate" class="tableInput"></td>
             </tr>    
             <tr>
                 <th class="cellStyle">Location</th>
-                <td><input type="text" name="revision" id="revision" class="tableInput"></td>
+                <td><input type="text" id="revision" class="tableInput"></td>
             </tr>    
             <tr>    
                 <th class="cellStyle">Change description</th>
-                <td><textarea name="description" id="changeDesc" cols="20" rows="5" class="tableInput"></textarea></td>
+                <td><textarea name="description" id="changeDesc" cols="20" rows="5" class="tableInput"></textarea>
+                    <input type="file" id="pPhUpload" style="display: none;" />
+                    <button id="uploadButtonPh" style="width: 21rem; background-color: white; color: #005EA4; border: 1px solid black; padding: 2%;">Insert a picture</button>
+                </td>
             </tr>
         </table>
     </section>
@@ -74,7 +60,27 @@
 <footer>
     <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
 </footer>
-<script src="../js/localstorage.js"></script> 
-<!-- <script src="../js/exportPdf.js"></script> -->
+
+<script src="../js/uploadPhoto.js"></script>
+<script>
+    document.getElementById('changeid').addEventListener('change',()=>{
+        sessionStorage['changeid'] = document.getElementById('changeid').value;
+    })
+    document.getElementById('issueDate').addEventListener('change',()=>{
+        sessionStorage['issueDate'] = document.getElementById('issueDate').value;
+    })
+    document.getElementById('revision').addEventListener('change',()=>{
+        sessionStorage['revision'] = document.getElementById('revision').value;
+    })
+    document.getElementById('changeDesc').addEventListener('change',()=>{
+        sessionStorage['changeDesc'] = document.getElementById('changeDesc').value;
+    })
+
+    document.getElementById('changeid').innerHTML= sessionStorage['changeid']
+    document.getElementById('issueDate').innerHTML= sessionStorage['issueDate']
+    document.getElementById('revision').innerHTML= sessionStorage['revision']
+    document.getElementById('changeDesc').innerHTML= sessionStorage['changeDesc']
+</script>
+<script src="../js/exportPdf.js"></script>
 </body>
 </html>

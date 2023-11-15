@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../style/button.css">
     <link rel="stylesheet" href="../style/fonts.css">
     <link rel="stylesheet" href="../style/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script> 
+
 </head>
 <body>
     <section id="tableHeader" style="display: flex; flex-direction: row; margin: auto; width: 50%;">
@@ -27,7 +31,20 @@
     </section>
 
     <section style="margin: auto; width: 80%;">
-    <h2 class="ablueColor" style="text-align: center;">Hazard analysis</h2>
+    <h1 class="ablueColor" style="text-align: center; font-size: 22px;">Hazard analysis</h1>
+    <section class="rowFlex" style="gap: 8%;">
+    <section id="icons" class="imgSecStyle" style="margin-left: -10%;">
+        <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
+        <img src="../icons/New folder/magnifying-glass-plus-solid.svg" class="imgWidth">
+        <img src="../icons/New folder/pen-to-square-solid.svg" class="imgWidth">
+        <img src="../icons/New folder/print-solid.svg" class="imgWidth">
+        <img src="../icons/New folder/signature-solid.svg" class="imgWidth">
+        <img src="../icons/New folder/download-solid.svg" class="imgWidth">
+        <img src="../icons/New folder/file-excel-solid.svg" class="imgWidth">
+        <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
+        <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth" id="pdf" style="cursor: pointer;">
+    </section>
+<section class="colFlex">
     <h3 class="ablueColor">Hazard Identification</h3>
 
     <table style="width: 100%; margin-bottom: 2%;">
@@ -39,19 +56,21 @@
         </tr>
         <tr>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">Example</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">unsafe cleanes issued by ATCO</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">loss of seperation</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">seriose incedince</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
         </tr>
     </table>
+</section>
+</section>
     <select name="add-hazard" id="addHazard" style="width: 100%; padding: 1%; background-color: #0070C0; color: white; font-weight: 600;">
         <option value="Add_Hazard">Add Hazard</option>
         <option value="Hazard_One">Hazard One</option>
@@ -72,19 +91,19 @@
         </tr>
         <tr>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">Example</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">ground equipment CWP</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">ATM system process flight data and presents to ATCO CWP</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">indra system incompleted with SANS equipment and unableto process data</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">the indra system design completable with survillance and flight data source used by SANS  or Dammam tower and approch services factory accessiable testing(FAT)</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
         </tr>
     </table>
@@ -99,19 +118,19 @@
         </tr>
         <tr>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">Example</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">ATCO CWP</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">ATCO use local flight data processor at  WCP</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">ATCO not trained for local flight data system</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">the indra system design completable with survillance and flight data source used by SANS  or Dammam tower and approch services factory accessiable testing(FAT)</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
         </tr>
     </table>
@@ -130,31 +149,31 @@
         </tr>
         <tr>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">Example</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of ATM system</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of radar  picture or track  on CWP</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">serious incedint</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">improbably</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="5" rows="5" style="border: none;">B</textarea>
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">serious incedint</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">Extremely improbably</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="5" rows="5" style="border: none;">C</textarea>
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
             </td>
         </tr>
     </table>
@@ -168,16 +187,16 @@
         </tr>
         <tr>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">Example</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">A training plan is required to be developed to all Dammam ATSU and Alhasa remote tower</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="34" rows="5" style="border: none;">H01</textarea>
+                <textarea name="" id="" cols="34" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="34" rows="5" style="border: none;">Dammam ATSU</textarea>
+                <textarea name="" id="" cols="34" rows="5" style="border: none;"></textarea>
             </td>
         </tr>
     </table>
@@ -196,31 +215,31 @@
         </tr>
         <tr>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">Example</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of ATM system</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of radar  picture or track  on CWP</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">serious incedint</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">improbably</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="5" rows="5" style="border: none;">B</textarea>
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">serious incedint</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">Extremely improbably</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="5" rows="5" style="border: none;">C</textarea>
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
             </td>
         </tr>
     </table>
@@ -234,16 +253,16 @@
         </tr>
         <tr>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">Example</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="30" rows="5" style="border: none;">A training plan is required to be developed to all Dammam ATSU and Alhasa remote tower</textarea>
+                <textarea name="" id="" cols="30" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="34" rows="5" style="border: none;">H01</textarea>
+                <textarea name="" id="" cols="34" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="34" rows="5" style="border: none;">Dammam ATSU</textarea>
+                <textarea name="" id="" cols="34" rows="5" style="border: none;"></textarea>
             </td>
         </tr>
     </table>
@@ -262,31 +281,31 @@
         </tr>
         <tr>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">Example</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of ATM system</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">total loss of radar  picture or track  on CWP</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">serious incedint</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="20" rows="5" style="border: none;">improbably</textarea>
+                <textarea name="" id="" cols="20" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="5" rows="5" style="border: none;">B</textarea>
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">serious incedint</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;">Extremely improbably</textarea>
+                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
             </td>
             <td style="padding: 0;">
-                <textarea name="" id="" cols="5" rows="5" style="border: none;">C</textarea>
+                <textarea name="" id="" cols="5" rows="5" style="border: none;"></textarea>
             </td>
         </tr>
     </table>
@@ -346,6 +365,7 @@
         </tr>
     </table>
 </section>
+
     <section id="btns" style="float: right; margin-top: 7%;">
         <button class="cancleBtn" onclick="window.location.href='changeCreteria.html'">Back</button>
         <button class="addBtn" onclick="window.location.href='postReview.html'">Next</button>
@@ -356,5 +376,6 @@
     </footer>
 
     <script src="../js/hazard.js"></script>
+    <script src="../js/exportPdf.js"></script>
 </body>
 </html>
