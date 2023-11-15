@@ -31,15 +31,15 @@
         <table id="table" class="tableStyle tableWidth">
             <tr>
                 <th class="cellStyle">Change ID</th>
-                <td><input type="text" name="changeid" id="changeid" class="tableInput"></td>
+                <td><input type="text" id="changeid" class="tableInput"></td>
             </tr>
             <tr>
                 <th class="cellStyle">Date</th>
-                <td><input type="date" name="issueDate" id="issueDate" class="tableInput"></td>
+                <td><input type="date" id="issueDate" class="tableInput"></td>
             </tr>    
             <tr>
                 <th class="cellStyle">Location</th>
-                <td><input type="text" name="revision" id="revision" class="tableInput"></td>
+                <td><input type="text" id="revision" class="tableInput"></td>
             </tr>    
             <tr>    
                 <th class="cellStyle">Change description</th>
@@ -60,11 +60,27 @@
 <footer>
     <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
 </footer>
-<!-- <script src="../js/localstorage.js"></script>  -->
-<!-- <script src="../js/uploadPhoto.js"></script> -->
 
+<script src="../js/uploadPhoto.js"></script>
+<script>
+    document.getElementById('changeid').addEventListener('change',()=>{
+        sessionStorage['changeid'] = document.getElementById('changeid').value;
+    })
+    document.getElementById('issueDate').addEventListener('change',()=>{
+        sessionStorage['issueDate'] = document.getElementById('issueDate').value;
+    })
+    document.getElementById('revision').addEventListener('change',()=>{
+        sessionStorage['revision'] = document.getElementById('revision').value;
+    })
+    document.getElementById('changeDesc').addEventListener('change',()=>{
+        sessionStorage['changeDesc'] = document.getElementById('changeDesc').value;
+    })
 
+    document.getElementById('changeid').innerHTML= sessionStorage['changeid']
+    document.getElementById('issueDate').innerHTML= sessionStorage['issueDate']
+    document.getElementById('revision').innerHTML= sessionStorage['revision']
+    document.getElementById('changeDesc').innerHTML= sessionStorage['changeDesc']
+</script>
 <script src="../js/exportPdf.js"></script>
-
 </body>
 </html>

@@ -44,6 +44,22 @@
 <footer>
     <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
 </footer>
-<script src="../js/localstorage.js"></script>
+<script>
+    //     let changeId2 = document.getElementById('changeid2');
+    // let issueDate2 = document.getElementById('issueDate2');
+    // let revision2 = document.getElementById('revision2');
+    // let changeDesc2 = document.getElementById('changeDesc2');
+    
+    // let chId = localStorage.getItem('changeid')
+    // let issDa = localStorage.getItem('issueDate')
+    // let revi = localStorage.getItem('revision')
+    // let chDes = localStorage.getItem('changeDesc')
+    
+    document.getElementById('changeid2').innerHTML= sessionStorage['changeid']
+    document.getElementById('issueDate2').innerHTML= sessionStorage['issueDate']
+    document.getElementById('revision2').innerHTML= sessionStorage['revision']
+    document.getElementById('changeDesc2').innerHTML= sessionStorage['changeDesc']
+</script>
+
 </body>
 </html>
