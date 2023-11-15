@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style/button.css">
     <link rel="stylesheet" href="../style/fonts.css">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/toggle.css">
 </head>
 <body>
     <section id="tableHeader" style="display: flex; flex-direction: row; margin: auto; width: 50%;">
@@ -51,30 +52,46 @@
         <tr>
             <td>Does the change intrduce additional locations for for providing the air navigation services?</td>
             <td>
-                <input type="text" name="" id="" value="No" class="inputStyle" style="width: 50%;">
+                <label class="switch">
+                    <input class="switch-input" id="switch-input1" type="checkbox" />
+                    <span class="switch-label" data-on="Yes" data-off="No"></span> 
+                    <span class="switch-handle"></span> 
+                   </label>
             </td>
-            <td><textarea name="" id="" cols="15" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+            <td><textarea name="" id="gaca_1Just" cols="15" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
         </tr>    
         <tr>  
             <td>Does the change affect any designed SANS personnal as specified in the operations specifications?</td>
             <td>
-                <input type="text" name="" id="" value="No" class="inputStyle"  style="width: 50%;">
+                <label class="switch">
+                    <input class="switch-input" id="switch-input2" type="checkbox" />
+                    <span class="switch-label" data-on="Yes" data-off="No"></span> 
+                    <span class="switch-handle"></span> 
+                   </label>
             </td>
-            <td><textarea name="" id="" cols="15" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+            <td><textarea name="" id="gaca_2Just" cols="15" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
         </tr>
         <tr>
             <td>Is the change assossiated with SANS operations specifications (requier update of the SANS operations)?</td>
             <td>
-                <input type="text" name="" id="" value="No" class="inputStyle"  style="width: 50%;">
+                <label class="switch">
+                    <input class="switch-input" id="switch-input3" type="checkbox" />
+                    <span class="switch-label" data-on="Yes" data-off="No"></span> 
+                    <span class="switch-handle"></span> 
+                   </label>
             </td>
-            <td><textarea name="" id="" cols="15" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+            <td><textarea name="" id="gaca_3Just" cols="15" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
         </tr>    
         <tr>  
             <td>Does the change affect any facility, procedure, system, work scope or staff that are used for provision orf air navigation?</td>
             <td>
-                <input type="text" name="" id="" value="No" class="inputStyle"  style="width: 50%;">
+                <label class="switch">
+                    <input class="switch-input" id="switch-input4" type="checkbox" />
+                    <span class="switch-label" data-on="Yes" data-off="No"></span> 
+                    <span class="switch-handle"></span> 
+                   </label>
             </td>
-            <td><textarea name="" id="" cols="15" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
+            <td><textarea name="" id="gaca_4Just" cols="15" rows="5" style="border: none;">Its a routine activity (QUARTERLY PMI's)</textarea></td>
         </tr>  
     </table>
     </section>
@@ -93,15 +110,16 @@
     </section>
 </section>
     <section id="btns" style="float: right; margin-top: 7%;">
-        <input type="button" value="Main" class="cancleBtn" onclick="window.location.href = 'main.html'">
+    <input type="button" value="Main" class="cancleBtn" onclick="window.location.href = 'main.html'">
     <input type="button" value="Back" class="cancleBtn" onclick="window.location.href = 'lowForm.html'">
-    <input type="button" value="Send" id="nextBtn" class="addBtn" onclick="alertt()">
+    <input type="button" value="Send" id="nextBtn" class="addBtn" onclick="window.location.href ='sendEmForm.html'">
     </section>
 
     <footer>
         <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
     </footer>
 
-    <script src="../js/alert.js"></script>
+    <!-- <script src="../js/alert.js"></script> -->
+    <script src="../js/toggle2.js"></script>
 </body>
 </html>
