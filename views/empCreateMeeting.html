@@ -15,62 +15,68 @@
           <p>List of Employees</p>
         <p onclick="selectAll()" style="cursor: pointer;">Sellect All</p>  
         </section>
-        <section id="emp_header">
+        <section id="emp_header" style="display: flex; flex-direction: row; justify-content: space-around;">
+            <span style="height: 5%; width: 5%; margin: 0 -10% 0 -1%;"></span>
             <span>Name</span>
             <span>Email</span>
             <span>ID number</span>
             <span>Invitation</span>
         </section>
         
-        <section class="info2">
-            <svg class="svgWidth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path style="fill: white;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+        <section style="display: flex; flex-direction: column; margin-top: 3%; width: 100%;">
+            <section style="background-color: #EAEFF5; display: flex; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2%;">
+            <svg class="svgWidth" style="margin-right: -2%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path style="fill:#EAEFF5;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
             </svg>
-            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
-            <span>Khaled Ahmed</span>
-            <span>Khaled@gmail.com</span>
-            <span>8036997</span>
-            <section>
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="10%" width="10%">
+            <span style="margin: 0 1%;">Khaled Ahmed</span>
+            <span style="margin: 0 5% 0 5%;">Khaled@gmail.com</span>
+            <span style="margin: 0 6%;">8036997</span>
+            <section style="margin: 0 0 0 1%;">
                 <button class="addBtn" id="selectEmpBtn1">Accept</button>
                 <button class="lighBgBtn" id="selectEmpBtn1">Assign another</button>
             </section>
-            
-            <svg class="svgWidth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            </section>
+            <section style="background-color: #EAEFF5; display: flex; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2%;">
+            <svg class="svgWidth" style="margin: 0 1% 0 -35%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path style="fill: #12D680;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
             </svg>
-            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
-            <span>Rayan Ahmed</span>
-            <span>Khaled@gmail.com</span>
-            <span>8036111</span>
-            <span style="text-align: center;">
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="10%" width="10%">
+            <span style="margin: 0 3%;">Rayan Ahmed</span>
+            <span style="margin: 0 5% 0 5%;">Khaled@gmail.com</span>
+            <span style="margin: 0 6%;">8036111</span>
+            <span style="margin: 0 -25% 0 10%;">
                 <input type="checkbox" name="invite" id="invite" value="Rayan Ahmed">
             </span>
-
-            <svg class="svgWidth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        </section>
+        <section style="background-color: #EAEFF5; display: flex; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2%;">
+            <svg class="svgWidth" style="margin: 0 1% 0 -35%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path style="fill: #12D680;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
             </svg>
-            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
-            <span>Hadeel Mohammed</span>
-            <span>Khaled@gmail.com</span>
-            <span>807649</span>
-            <span style="text-align: center;">
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="10%" width="10%">
+            <span style="margin: 0 3%;">Hadeel Ahmed</span>
+            <span style="margin: 0 5% 0 5%;">Khaled@gmail.com</span>
+            <span style="margin: 0 6%;">807649</span>
+            <span style="margin: 0 -25% 0 10%;">
                 <input type="checkbox" name="invite" id="invite" value="Hadeel Mohammed">
             </span>
-
-            <svg class="svgWidth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        </section>
+            <section style="background-color: #EAEFF5; display: flex; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2%;">
+            <svg class="svgWidth" style="margin: 0 1% 0 -35%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path style="fill: #707070;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
             </svg>
-            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%;" height="70%" width="70%">
-            <span>Sara Omar</span>
-            <span>Khaled@gmail.com</span>
-            <span>8039837</span>
-            <span style="text-align: center;">
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="10%" width="10%">
+            <span style="margin: 0 3%;">Hadeel Omar</span>
+            <span style="margin: 0 5% 0 5%;">Khaled@gmail.com</span>
+            <span style="margin: 0 6%;">8039837</span>
+            <span style="margin: 0 -25% 0 10%;">
                 <input type="checkbox" name="invite" id="invite" value="Sara Omar">
             </span>
         </section>
+        </section>
         <section style="margin: 20% 0 20% 30%; float: right;">
         <button class="cancleBtn" onclick="window.location.href = 'createMeeting.html'">Cancle</button>
-        <button class="addBtn" onclick="window.location.href = 'impactAssessment.html'">Create Meeting</button>
+        <button class="addBtn">Create Meeting</button>
     </section>
     </section>
     <footer>
