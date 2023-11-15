@@ -1,22 +1,21 @@
-document.getElementById('lowForm').addEventListener('click', ()=>{
-    document.getElementById('low').checked = true
     let result = document.getElementById('result')
-    result.innerHTML = "Low - light safety ridk assessment    - refere to part C. "+ `<br>` + document.getElementById('lowForm').textContent
-    sessionStorage.setItem('lowForm',true)
+    let result2 = document.getElementById('result')
+
+    document.getElementById('lowForm').addEventListener('click', ()=>{
+    result2.innerHTML = "Low - light safety ridk assessment    - refere to part C. "+ `<br>` + document.getElementById('lowForm').textContent;
+    result2.style.cursor = 'pointer';
+    result2.addEventListener('click',()=>{
+        window.location.href = 'lowForm.html'
+     })
     sessionStorage.setItem('lowFormText',document.getElementById('lowForm').textContent);
-    
-    //  sessionStorage.getItem('lowForm')
 })
 document.getElementById('medForm').addEventListener('click', ()=>{
-    document.getElementById('meduim').checked = true
-    let result = document.getElementById('result')
-    result.innerHTML = "Meduim - safety risk assessment. "+ `<br>` + document.getElementById('medForm').textContent
-    sessionStorage.setItem('meduimForm',true)
+    result.innerHTML = "Meduim - safety risk assessment." + `<br>` + document.getElementById('medForm').textContent
+    result.style.cursor = 'pointer';
+    result.addEventListener('click',()=>{
+        window.location.href = 'hazardAnaless.html'
+    })
     sessionStorage.setItem('meduimFormText',document.getElementById('medForm').textContent)
 })
 
-// window.reload = function(){
-//     document.getElementById('result').innerHTML = ''
-//     document.getElementById('resultLS').innerHTML = sessionStorage.getItem('lowFormText')
-// }
 
