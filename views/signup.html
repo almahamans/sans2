@@ -18,16 +18,18 @@
             <input type="tel" name="phone" id="phone" maxlength="10" placeholder="Phone number" pattern="{0-9}[10]" class="inputStyle inputWidth2" required>
             <input type="password" name="pass" id="pass" maxlength="8" placeholder="Password" class="inputStyle inputWidth2" required>
             <input type="password" name="pass2" id="pass2" maxlength="8" placeholder="Confirm Password" class="inputStyle inputWidth2" required>
+            
             <input type="file" id="pPhUpload" style="display: none;" />
-            <button id="uploadButtonPh" style="width: 21rem; background-color: white; color: #005EA4; border: 1px solid black; padding: 2%;">Upload personal photo</button>
+            <button id="uploadButtonPh" style="width: 21rem; background-color: white; color: #005EA4; border: 1px solid black; padding: 2%; cursor: pointer;">Upload Personal Photo</button>
             <input type="file" id="signUpload" style="display: none;" />
-            <button id="uploadButtonS" style="width: 21rem; background-color: white; color: #005EA4; border: 1px solid black; padding: 2%;">Upload Signature</button>
+            <button id="uploadButtonS" style="width: 21rem; background-color: white; color: #005EA4; border: 1px solid black; padding: 2%; cursor: pointer;">Upload Signature</button>
+            
             <input type="button" value="Sign Up" class="signInBtn sBoldSize whiteColor" style="width: 21rem ;" onclick="window.location.href = 'login.html'">
         </form> 
     </section>
-    <a href="login.html"><p class="sSizeFont lightblueColor left" >Sign In</p></a>
 
 <script src="../js/uploadPhoto.js"></script>
+
 <script>
     document.getElementById('email').addEventListener('change',()=>{
             localStorage['email'] = document.getElementById('email').value

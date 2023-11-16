@@ -9,8 +9,15 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <section style="margin-left: 20%;">
-    
+    <section style="display: flex; flex-direction: row; justify-content: space-around; background-color: #EAEFF5; color: black; font-size: 15px; font-weight: 600; border-radius: 5px; width: 50%; align-items: center; margin: 3% auto; padding: 5px;">
+        <span style="cursor: pointer;" onclick="window.location.href = 'main.html'">Home</span>
+        <span style="cursor: pointer;">File</span>
+        <span style="cursor: pointer;">Account</span>
+        <span style="cursor: pointer;"><img src="../icons/New folder/bell-solid.svg" class="imgWidth2" alt=""></span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Sign up</span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Log out</span>
+    </section>
+    <section style="margin-left: 25%;">
     <form>
     <section>
         <h1 class="veryDarkBlue" style="margin-left: 30%;">Change Request</h1>  
@@ -45,16 +52,6 @@
     <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
 </footer>
 <script>
-    //     let changeId2 = document.getElementById('changeid2');
-    // let issueDate2 = document.getElementById('issueDate2');
-    // let revision2 = document.getElementById('revision2');
-    // let changeDesc2 = document.getElementById('changeDesc2');
-    
-    // let chId = localStorage.getItem('changeid')
-    // let issDa = localStorage.getItem('issueDate')
-    // let revi = localStorage.getItem('revision')
-    // let chDes = localStorage.getItem('changeDesc')
-    
     document.getElementById('changeid2').innerHTML= sessionStorage['changeid']
     document.getElementById('issueDate2').innerHTML= sessionStorage['issueDate']
     document.getElementById('revision2').innerHTML= sessionStorage['revision']

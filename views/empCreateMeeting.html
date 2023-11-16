@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
+    <section style="display: flex; flex-direction: row; justify-content: space-around; background-color: #EAEFF5; color: black; font-size: 15px; font-weight: 600; border-radius: 5px; width: 50%; align-items: center; margin: 3% auto; padding: 5px;">
+        <span onclick="window.location.href = 'main.html'" style="cursor: pointer;">Home</span>
+        <span style="cursor: pointer;">File</span>
+        <span style="cursor: pointer;">Account</span>
+        <span><img src="../icons/New folder/bell-solid.svg" style="cursor: pointer;" class="imgWidth2" alt=""></span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Sign up</span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Log out</span>
+    </section>
+
     <section style="width: 70%; margin: auto;">
         <h2 style="color: #3896DA; text-align: center;">Create Meeting</h2>
         <section style="display: flex; flex-direction: row; justify-content: space-between; color: #3896DA; font-size: 18px;">
@@ -28,11 +37,11 @@
             <svg class="svgWidth" style="margin-right: -2%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path style="fill:#EAEFF5;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
             </svg>
-            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="10%" width="10%">
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 3%;" height="8%" width="8%">
             <span style="margin: 0 1%;">Khaled Ahmed</span>
             <span style="margin: 0 5% 0 5%;">Khaled@gmail.com</span>
             <span style="margin: 0 6%;">8036997</span>
-            <section style="margin: 0 0 0 1%;">
+            <section style="margin: 0 -10px 0 -9px;">
                 <button class="addBtn" id="selectEmpBtn1">Accept</button>
                 <button class="lighBgBtn" id="selectEmpBtn1">Assign another</button>
             </section>
@@ -41,7 +50,7 @@
             <svg class="svgWidth" style="margin: 0 1% 0 -35%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path style="fill: #12D680;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
             </svg>
-            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="10%" width="10%">
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="8%" width="8%">
             <span style="margin: 0 3%;">Rayan Ahmed</span>
             <span style="margin: 0 5% 0 5%;">Khaled@gmail.com</span>
             <span style="margin: 0 6%;">8036111</span>
@@ -53,7 +62,7 @@
             <svg class="svgWidth" style="margin: 0 1% 0 -35%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path style="fill: #12D680;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
             </svg>
-            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="10%" width="10%">
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="8%" width="8%">
             <span style="margin: 0 3%;">Hadeel Ahmed</span>
             <span style="margin: 0 5% 0 5%;">Khaled@gmail.com</span>
             <span style="margin: 0 6%;">807649</span>
@@ -65,7 +74,7 @@
             <svg class="svgWidth" style="margin: 0 1% 0 -35%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path style="fill: #707070;" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
             </svg>
-            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="10%" width="10%">
+            <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: 0 1%;" height="8%" width="8%">
             <span style="margin: 0 3%;">Hadeel Omar</span>
             <span style="margin: 0 5% 0 5%;">Khaled@gmail.com</span>
             <span style="margin: 0 6%;">8039837</span>
@@ -74,8 +83,8 @@
             </span>
         </section>
         </section>
-        <section style="margin: 20% 0 20% 30%; float: right;">
-        <button class="cancleBtn" onclick="window.location.href = 'createMeeting.html'">Cancle</button>
+        <section style="margin: 20% 0 0 30%; float: right;">
+        <button class="cancleBtn" onclick="window.location.href = 'createMeeting.html'">Back</button>
         <button class="addBtn">Create Meeting</button>
     </section>
     </section>

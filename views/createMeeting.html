@@ -9,10 +9,18 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
+    <section style="display: flex; flex-direction: row; justify-content: space-around; background-color: #EAEFF5; color: black; font-size: 15px; font-weight: 600; border-radius: 5px; width: 50%; align-items: center; margin: 3% auto; padding: 5px;">
+        <span onclick="window.location.href = 'main.html'" style="cursor: pointer;">Home</span>
+        <span style="cursor: pointer;">File</span>
+        <span style="cursor: pointer;">Account</span>
+        <span><img src="../icons/New folder/bell-solid.svg" style="cursor: pointer;" class="imgWidth2" alt=""></span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Sign up</span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Log out</span>
+    </section>
+    
     <section class="colFlex center">
         <h1 class="lightblueColor">Create Meeting</h1>
         <form class="bgGrey medWidth rowFlex" id="meetingForm">
-
             <span class="colFlex">
             <label for="title" class="ablueColor label">Meeting Title:</label>
             <input type="text" name="title" id="title" placeholder="Quality Study" class="inputStyle inputWidth">

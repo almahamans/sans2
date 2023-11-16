@@ -14,11 +14,19 @@
 
 </head>
 <body style="font-size: 20px; font-weight: 600;">
-    <section style="margin-left: 20%;">
+    <section style="display: flex; flex-direction: row; justify-content: space-around; background-color: #EAEFF5; color: black; font-size: 15px; font-weight: 600; border-radius: 5px; width: 50%; align-items: center; margin: 3% auto; padding: 5px;">
+        <span onclick="window.location.href = 'main.html'" style="cursor: pointer;">Home</span>
+        <span style="cursor: pointer;">File</span>
+        <span style="cursor: pointer;">Account</span>
+        <span><img src="../icons/New folder/bell-solid.svg" style="cursor: pointer;" class="imgWidth2" alt=""></span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Sign up</span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Log out</span>
+    </section>
 
+    <section style="margin-left: 20%;">
         <form>
             <section id="tableHeader" style="display: flex; flex-direction: row; text-align: center; margin-left: -2%; margin-bottom: 2%;">
-                <img src="../img/logo.jpg" width="8%" height="auto" style="border: 1px solid black; margin-top: 12px;" alt="">
+                <img src="../img/logo.jpg" width="7%" height="auto" style="border: 1px solid black; margin-top: 12px;" alt="">
         <section>
                 <p class="headTP sSizeFont">Initial Safety Impact Assessment</p>
             <table class="tableStyle">    
@@ -36,7 +44,7 @@
         <h1 style="display: none;">safety_impact_assessment</h1>
             <section class="rowFlex" style="gap: 10px; margin-left: -10px;">
 
-                <section id="icons" class="imgSecStyle">
+                <section id="icons" class="imgSecStyle" style="height: 50%;">
                     <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
                     <img src="../icons/New folder/magnifying-glass-plus-solid.svg" class="imgWidth">
                     <img src="../icons/New folder/pen-to-square-solid.svg" class="imgWidth">
@@ -147,7 +155,7 @@
             </section>
 
             <section>
-                <table class="tableStyle tablePadd" style="width: 71%; margin-left: 20px;">
+                <table class="tableStyle tablePadd" style="width: 71%; margin-left: 22px;">
                     <tr class="headerTable whiteColor" style="border-collapse: collapse;">
                        <th class="tablePadd"></th>
                        <th class="tablePadd"></th>
