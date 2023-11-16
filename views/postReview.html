@@ -13,29 +13,34 @@
 
 </head>
 <body>
-    <section id="tableHeader" style="display: flex; flex-direction: row; margin: auto; width: 50%;">
-        <img src="../img/logo.jpg" width="14%" height="10%" style="border: 1px solid black;" alt="">
-<section style="width: 100%; "> 
-    <table>
-        <tr >
-            <th style="width: 100rem; padding: 1%; font-size: 15px;">Post Operational Review Form</th>
-        </tr>
-    </table>
-    <table style="width: inherit; border-collapse: collapse;">    
+    <section style="display: flex; flex-direction: row; justify-content: space-around; background-color: #EAEFF5; color: black; font-size: 15px; font-weight: 600; border-radius: 5px; width: 50%; align-items: center; margin: 3% auto; padding: 5px;">
+        <span onclick="window.location.href = 'main.html'" style="cursor: pointer;">Home</span>
+        <span style="cursor: pointer;">File</span>
+        <span style="cursor: pointer;">Account</span>
+        <span><img src="../icons/New folder/bell-solid.svg" style="cursor: pointer;" class="imgWidth2" alt=""></span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Sign up</span>
+        <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Log out</span>
+    </section>
+
+    <section id="tableHeader" style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 2%;">
+        <img src="../img/logo.jpg" width="6%" height="auto" style="border: 1px solid black; margin-top: 12px;" alt="">
+<section>
+        <p class="headTP sSizeFont">Post Operational Review Form</p>
+    <table class="tableStyle">    
         <tr>
-        <td class="cellStyle">Form NO:</td>
-        <td><p id="formNoRes" class="tableInput"></p></td>
-        <td class="cellStyle">Revision:</td>
-        <td><p id="revisionRes" class="tableInput"></p></td>
-        <td class="cellStyle">Issue Date:</td>
-        <td><p id="issueDateRes" class="tableInput"></p></td>
-        </tr>
+            <td class="cellStyle" style="width: 13%;">Form NO:</td>
+            <td style="padding: 0;"><input type="text" name="formNo" id="formNo" class="tableInput" style="font-size: 14px; width:max-content;" value="SANS-SQE-PMM02-FO026"></td>
+            <td class="cellStyle" style="width: 13%;">Revision:</td>
+            <td style="padding: 0;"><input type="text" name="revision" id="revision" style="width: 14%; font-size: 14px;" class="tableInput" value="B"></td>
+            <td class="cellStyle">Issue Date:</td>
+            <td style="padding: 0;"><input type="date" name="issueDate" id="issueDate" class="tableInput" style="font-size: 14px; width:max-content;"></td>
+            </tr>
     </table>
 </section>
     </section>
     <h1 style="display: none;">Post_Operational_Review_Form</h1>
     <section class="rowFlex" style="margin-top: 2%;">
-    <section id="icons" class="imgSecStyle" style="margin-right: -15%; margin-left: 15%;">
+    <section id="icons" class="imgSecStyle" style="margin-right: -15%; margin-left: 15%; height: 50%;">
         <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
         <img src="../icons/New folder/magnifying-glass-plus-solid.svg" class="imgWidth">
         <img src="../icons/New folder/pen-to-square-solid.svg" class="imgWidth">

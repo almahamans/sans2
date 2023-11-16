@@ -19,15 +19,3 @@ document.getElementById('uploadButton5').addEventListener('click', function() {
 document.getElementById('uploadButton6').addEventListener('click', function() {
   document.getElementById('fileUpload6').click();
 });
-// document.getElementById('uploadButton').addEventListener('click', function() {
-//   var input = document.getElementById('fileUpload');
-//   var data = new FormData();
-
-//   for (var i = 0; i < input.files.length; i++) {
-//       data.append('file' + i, input.files[i]);
-//   }
-
-//   var xhr = new XMLHttpRequest();
-//   xhr.open('POST', 'upload.php', true);
-//   xhr.send(data);
-// });

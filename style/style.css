@@ -67,9 +67,9 @@ a{
     text-decoration: none;
 }
 .medWidth{
-    width: 70%;
+    width: 60%;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 3rem;
     gap: 2rem;
 }
 table, td, tr{
@@ -110,6 +110,11 @@ table, td, tr{
     height: 25px;
     margin: 1%;
 }
+.imgWidth2{
+    width: 15px;
+    height: 20px;
+    margin: 1%;
+}
 .imgSecStyle{
     display: flex;
     flex-direction: column;
@@ -118,8 +123,8 @@ table, td, tr{
     padding: 2px;
 }
 .svgWidth{
-    width: 50%;
-    height: 50%;
+    width: 1%;
+    height: 1%;
 }
 #header{
     background-color: #EAEFF5;
@@ -154,4 +159,14 @@ row-gap: 20%;
     }  
 .tablePadd{
     padding: 2%;
+}
+
+input[type=file]::file-selector-button{
+    background: #3896DA;
+border: 1px solid #707070;
+border-radius: 27px;
+padding: 5px 20px ;
+font-weight: 600;
+color: white;
+cursor: pointer;
 }
