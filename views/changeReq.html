@@ -22,75 +22,124 @@
         <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Log out</span>
     </section>
 
+
     <section style="margin-left: 20%; margin-top: 5%;" id="contentToPrint"> 
-    <form>
-        <p><b>Change Request</b> > Assign Safety Impact Assessor > </p>
-        <h1 class="veryDarkBlue" id="subject" style="margin-left: 30%;">Change Request</h1> 
-        <section class="rowFlex" style="gap: 10px;">
-        <section id="icons" class="imgSecStyle" style="height: 50%;">
-            <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/magnifying-glass-plus-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/pen-to-square-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/print-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/signature-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/download-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/file-excel-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
-            <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth" id="pdf" style="cursor: pointer;">
+    <form action="https://formspree.io/f/xgejbpyv" method="post">
+        <section id="section1" class="section1">
+            <h1 class="veryDarkBlue" id="subject" style="margin-left: 30%;">Change Request</h1> 
+            <section class="rowFlex" style="gap: 10px;">
+                <section id="icons" class="imgSecStyle" style="height: 50%;">
+                    <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/magnifying-glass-plus-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/pen-to-square-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/print-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/signature-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/download-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/file-excel-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
+                    <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth" id="pdf" style="cursor: pointer;">
+                </section>
+                <table id="table" class="tableStyle tableWidth">
+                    <tr>
+                        <th class="cellStyle">Change ID</th>
+                        <td><input type="text" id="changeid" name="changeid" required class="tableInput"></td>
+                    </tr>
+                    <tr>
+                        <th class="cellStyle">Date</th>
+                        <td><input type="date" id="issueDate" name="issueDate" required class="tableInput"></td>
+                    </tr>    
+                    <tr>
+                        <th class="cellStyle">Location</th>
+                        <td><input type="text" id="location" name="location" required class="tableInput"></td>
+                    </tr>    
+                    <tr>    
+                        <th class="cellStyle">Change description</th>
+                        <td><textarea name="description" id="changeDesc" cols="20" rows="5" class="tableInput"></textarea>
+                            <input type="file" id="pPhUpload" name="pPhUpload" style="display: none;" />
+                            <button id="uploadButtonPh" style="width: 21rem; background-color: white; color: #005EA4; border: 1px solid black; padding: 2%;">Insert a picture</button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section id="btns" style="float: right; margin-top: 7%; margin-right: 30%;">
+                <input type="button" value="Cancle" class="cancleBtn" onclick="window.location.href = 'main.html'">
+                <input type="button" id="nextBtn" class="addBtn" value="Next">
+                <!-- <button type="button" value="Next" id="nextBtn" class="addBtn" > -->
+            </section>
         </section>
-        <table id="table" class="tableStyle tableWidth">
-            <tr>
-                <th class="cellStyle">Change ID</th>
-                <td><input type="text" id="changeid" class="tableInput"></td>
-            </tr>
-            <tr>
-                <th class="cellStyle">Date</th>
-                <td><input type="date" id="issueDate" class="tableInput"></td>
-            </tr>    
-            <tr>
-                <th class="cellStyle">Location</th>
-                <td><input type="text" id="revision" class="tableInput"></td>
-            </tr>    
-            <tr>    
-                <th class="cellStyle">Change description</th>
-                <td><textarea name="description" id="changeDesc" cols="20" rows="5" class="tableInput"></textarea>
-                    <input type="file" id="pPhUpload" style="display: none;" />
-                    <button id="uploadButtonPh" style="width: 21rem; background-color: white; color: #005EA4; border: 1px solid black; padding: 2%;">Insert a picture</button>
-                </td>
-            </tr>
-        </table>
-    </section>
-        <section id="btns" style="float: right; margin-top: 7%; margin-right: 30%;">
-        <input type="button" value="Cancle" class="cancleBtn" onclick="window.location.href = 'main.html'">
-        <input type="button" value="Next" id="nextBtn" class="addBtn" onclick="window.location.href = 'listOfEmp.html'">
-        </section>
+
+        <section id="section2" class="section2 hide" style="width: 80%;">
+            <h1 style="color: #3896DA; text-align: center;">Assign Safety Impact Assessor</h1>
+            <section style="display: flex; flex-direction: row; justify-content: space-between; color: #3896DA; font-size: 18px;">
+              <p>List of Employees</p>
+            <p>Filter</p>  
+            </section>
+            <section id="emp_header" style="display: flex; flex-direction: row; justify-content: space-between;">
+                <span style="height: 5%; width: 5%; margin: 0 -10% 0 -1%;"></span>
+                <span>Name</span>
+                <span>Email</span>
+                <span>ID number</span>
+                <span>Invitation</span>
+            </section>
+            <section style="display: flex; flex-direction: column; margin: 3% 1% 0 3%;">
+                <section style="display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 2%;">
+                <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: -1% -10% 2% -1%;" height="5%" width="5%" >
+                <span style="margin-left: -8%;">Khaled Ahmed</span>
+                <span style="margin-left: -8%;">Khaled@gmail.com</span>
+                <span style="margin-left: -8%;">8036997</span>
+                <span><a class="addBtn" id="selectEmpBtn1" data-employee-name="Khaled Ahmed">Select</a></span>
+            </section>
+            <section style="display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 2%;">
+                    <img src="../icons/New folder/circle-solid.svg" style=" border-radius: 50%; margin: -1% -10% 2% -1%;" height="5%" width="5%">
+                    <span style="margin-left: -8%;">Omar Ahmed</span>
+                    <span style="margin-left: -8%;">Khaled@gmail.com</span>
+                    <span style="margin-left: -8%;">8036997</span>
+                    <span><a class="addBtn" id="selectEmpBtn2" data-employee-name="Omar Ahmed">Select</a></span>
+            </section>
+            </section>
+            <section style="margin: 20% 0 20% 30%; float: right;">
+                <input type="submit" id="sendRequestBtn" class="addBtn" value="Send request">
+            </section>
+        </section> 
     </form>
     </section>
-</section>
 <footer>
     <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
 </footer>
-
-<script src="../js/uploadPhoto.js"></script>
 <script>
-    document.getElementById('changeid').addEventListener('change',()=>{
-        sessionStorage['changeid'] = document.getElementById('changeid').value;
-    })
-    document.getElementById('issueDate').addEventListener('change',()=>{
-        sessionStorage['issueDate'] = document.getElementById('issueDate').value;
-    })
-    document.getElementById('revision').addEventListener('change',()=>{
-        sessionStorage['revision'] = document.getElementById('revision').value;
-    })
-    document.getElementById('changeDesc').addEventListener('change',()=>{
-        sessionStorage['changeDesc'] = document.getElementById('changeDesc').value;
-    })
+    // document.getElementById('changeid').addEventListener('change',()=>{
+    //     sessionStorage['changeid'] = document.getElementById('changeid').value;
+    // })
+    // document.getElementById('issueDate').addEventListener('change',()=>{
+    //     sessionStorage['issueDate'] = document.getElementById('issueDate').value;
+    // })
+    // document.getElementById('revision').addEventListener('change',()=>{
+    //     sessionStorage['revision'] = document.getElementById('revision').value;
+    // })
+    // document.getElementById('changeDesc').addEventListener('change',()=>{
+    //     sessionStorage['changeDesc'] = document.getElementById('changeDesc').value;
+    // })
 
-    document.getElementById('changeid').innerHTML= sessionStorage['changeid']
-    document.getElementById('issueDate').innerHTML= sessionStorage['issueDate']
-    document.getElementById('revision').innerHTML= sessionStorage['revision']
-    document.getElementById('changeDesc').innerHTML= sessionStorage['changeDesc']
+    // document.getElementById('changeid').innerHTML= sessionStorage['changeid']
+    // document.getElementById('issueDate').innerHTML= sessionStorage['issueDate']
+    // document.getElementById('revision').innerHTML= sessionStorage['revision']
+    // document.getElementById('changeDesc').innerHTML= sessionStorage['changeDesc']
+
+    // Add this to your existing script in the "Change Request" page
+
+    document.getElementById('nextBtn').addEventListener('click', (event) => {
+        event.preventDefault();  // Prevent the default form submission behavior
+        console.log("sadsa");
+        // Assuming you have a function to validate the form data, replace it with your validation logic
+        // Hide section 1 and show section 2
+        document.getElementById('section1').classList.add('hide');
+        document.getElementById('section2').classList.remove('hide');
+    });
+
+
 </script>
+<script src="../js/functions.js"></script>
+<script src="../js/uploadPhoto.js"></script>
 <script src="../js/exportPdf.js"></script>
 </body>
 </html>
