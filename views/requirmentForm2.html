@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requirment Form</title>
+    <title>Requirement Form</title>
     <link rel="stylesheet" href="../style/button.css">
     <link rel="stylesheet" href="../style/fonts.css">
     <link rel="stylesheet" href="../style/style.css">
@@ -24,26 +24,26 @@
     
     <section id="tableHeader" style="display: flex; flex-direction: row; margin: auto; width: 50%;">
         <img src="../img/logo.jpg" width="14%" height="10%" style="border: 1px solid black;" alt="">
-<section style="width: 100%; "> 
-    <table>
-        <tr >
-            <th style="width: 100rem; padding: 1%;">Safety Requirment Implementation Plan Form</th>
-        </tr>
-    </table>
-    <table style="width: inherit; border-collapse: collapse;">    
-        <tr>
-        <td class="cellStyle">Form NO:</td>
-        <td><p id="formNoRes" class="tableInput"></p></td>
-        <td class="cellStyle">Revision:</td>
-        <td><p id="revisionRes" class="tableInput"></p></td>
-        <td class="cellStyle">Issue Date:</td>
-        <td><p id="issueDateRes" class="tableInput"></p></td>
-        </tr>
-    </table>
-</section>
+        <section style="width: 100%;"> 
+            <table>
+                <tr>
+                    <th style="width: 100rem; padding: 1%;">Safety Requirement Implementation Plan Form</th>
+                </tr>
+            </table>
+            <table style="width: inherit; border-collapse: collapse;">    
+                <tr>
+                    <td class="cellStyle">Form NO:</td>
+                    <td><p id="formNoRes" class="tableInput"></p></td>
+                    <td class="cellStyle">Revision:</td>
+                    <td><p id="revisionRes" class="tableInput"></p></td>
+                    <td class="cellStyle">Issue Date:</td>
+                    <td><p id="issueDateRes" class="tableInput"></p></td>
+                </tr>
+            </table>
+        </section>
     </section>
 
-<h1 style="display: none;">Post_Operational_Review_Form</h1>
+    <h1 style="display: none;">Post_Operational_Review_Form</h1>
     <section class="rowFlex" style="gap: 10px; margin-top: 1%;">
         <section id="icons" class="imgSecStyle">
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
@@ -58,15 +58,15 @@
         </section>
         <section style="margin: auto; width: 80%;">
             <table>
-                <tr class="headerTable whiteColor tablePadd" >
+                <tr class="headerTable whiteColor tablePadd">
                     <th style="font-size: 15px;">SR reference</th>
-                    <th style="font-size: 15px;">safety Requirment</th>
-                    <th style="font-size: 15px;">source (related hazard)</th>
-                    <th style="font-size: 15px;">safety Requirment owner</th>
-                    <th style="font-size: 15px;">Implementation lead</th>
-                    <th style="font-size: 15px;">Required completation date</th>
-                    <th style="font-size: 15px;">Evideince of Implementation</th>
-                    <th style="font-size: 15px;" >Status</th>
+                    <th style="font-size: 15px;">Safety Requirement</th>
+                    <th style="font-size: 15px;">Source (Related Hazard)</th>
+                    <th style="font-size: 15px;">Safety Requirement Owner</th>
+                    <th style="font-size: 15px;">Implementation Lead</th>
+                    <th style="font-size: 15px;">Required Completion Date</th>
+                    <th style="font-size: 15px;">Evidence of Implementation</th>
+                    <th style="font-size: 15px;">Status</th>
                 </tr>
                 <tr>
                     <td><input type="text" name="" id="" class="tableInput"></td>
@@ -77,6 +77,10 @@
                     <td><input type="text" name="" id="" class="tableInput"></td>
                     <td><input type="text" name="" id="" class="tableInput"></td>
                     <td><input type="text" name="" id="" class="tableInput"></td>
+                    <td>
+                        <!-- زر Review -->
+                        <input type="button" value="Review" onclick="openWordDocument()">
+                    </td>
                 </tr>
                 <tr>
                     <td><input type="text" name="" id="" class="tableInput"></td>
@@ -89,16 +93,22 @@
                     <td><input type="text" name="" id="" class="tableInput"></td>
                 </tr>
             </table>
+        </section>
     </section>
-</section>
+
     <section id="btns" style="float: right; margin-top: 7%;">
-        <input type="button" value="Cancle" class="cancleBtn" onclick="window.location.href = 'changeSummery.html'">
+        <input type="button" value="Cancel" class="cancelBtn" onclick="window.location.href = 'changeSummary.html'">
         <input type="button" value="Next" id="nextBtn" class="addBtn" onclick="window.location.href = 'signForm.html'">
     </section>
 
     <footer>
         <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
     </footer>
-    <script src="../js/exportPdf.js"></script>
+    <script>
+        function openWordDocument() {
+            // يمكنك هنا وضع الكود الخاص بفتح مستند Word
+            // على سبيل المثال: window.open('path/to/your/word/document.docx', '_blank');
+        }
+    </script>
 </body>
 </html>
