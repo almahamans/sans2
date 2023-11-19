@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+
     <style>
         /* Style for the suggestions container */
         #suggestions-container, #suggestions-container2 {
@@ -100,34 +101,34 @@
             </tr>
             <tr>
                 <td style="padding: 0;">
-                <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+                <textarea name="id" id="id" cols="10" rows="5" style="border: none;"></textarea>
                </td>
                 <td style="padding: 0;">
                     <textarea name="hazardDescription" id="hazard" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
                 <td style="padding: 0;">
-                    <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+                    <textarea name="consequences" id="consequences" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
                 <td style="padding: 0;">
-                    <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+                    <textarea name="severity" id="severity" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
                 <td style="padding: 0;">
-                    <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+                    <textarea name="likelihood" id="likelihood" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
                 <td style="padding: 0;">
-                    <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+                    <textarea name="risk_class" id="risk_class" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
                 <td style="padding: 0;">
                     <textarea name="mitigation" id="mitigation" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
                 <td style="padding: 0;">
-                    <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+                    <textarea name="severity_post" id="severity_post" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
                 <td style="padding: 0;">
-                    <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+                    <textarea name="likelihood_post" id="likelihood_post" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
                 <td style="padding: 0;">
-                    <textarea name="" id="" cols="10" rows="5" style="border: none;"></textarea>
+                    <textarea name="risk_class_post" id="risk_class_post" cols="10" rows="5" style="border: none;"></textarea>
                 </td>
             </tr>
             <tr>
@@ -165,7 +166,6 @@
         </table>
         </section>
         <div id="suggestions-container"></div>
-        <div id="suggestions-container2"></div>
 
     <p class="veryDarkBlue" style="font-weight: 700; margin-left: 10%;">C.2 Safety Requirment</p>
     <table style="width: 80%; margin: auto;">
@@ -222,8 +222,8 @@
         <img src="../img/footer.png" width="100%" style="margin: 10% 0 0 0; height: 50%;">
     </footer>
 
+
     <script src="../js/ai.js"></script>
-    <script src="../js/ai2.js"></script>
-    
+    <!-- <script src="../js/ai-two.js"></script> -->
 </body>
 </html>
