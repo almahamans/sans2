@@ -1,3 +1,6 @@
+body{
+    margin-top: 80px;
+}
 .colFlex{
     display: flex;
     flex-direction: column;
@@ -8,7 +11,7 @@
     flex-direction: row;
 }
 .padd{
-    padding-top: 8rem;
+    padding-top: 4rem;
 }
 .padd2{
     padding-top: 10rem;
@@ -136,10 +139,11 @@ table, td, tr{
     gap: 10%;
 }
 .info{
-display: grid;
-grid-template-columns: 1% 10% 10% 10% 60%;
-column-gap: 2%;
-row-gap: 20%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1% 10% 10% 10% 60%;
+    column-gap: 2%;
+    row-gap: 20%;
 }
 #emp_header{
     /* display: flex;
@@ -174,4 +178,35 @@ cursor: pointer;
 
 .hide {
     display: none;
+}
+
+/* Enhanced Full-Screen Header Styling */
+.header-bar {
+    position: fixed;
+    width: 98%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #17557e75;
+    backdrop-filter: blur(5px) ;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-bar a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header-bar a:hover {
+    color: #ecf0f1;
 }

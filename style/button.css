@@ -33,7 +33,6 @@
 }
 
 .servicesBtn:hover {
-    transform: translateY(-6px) translateX(6px); /* Move to the right */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -43,7 +42,6 @@
 
 /* 3D effect for signInBtn, cancleBtn, addBtn, lighBgBtn */
 .signInBtn, .cancleBtn, .addBtn, .lighBgBtn {
-    width: 20rem;
     height: 2rem;
     padding: 5px 20px;
 }
@@ -57,7 +55,6 @@
 
 /* Hover effect for all buttons */
 .signInBtn:hover, .cancleBtn:hover, .addBtn:hover, .lighBgBtn:hover {
-    transform: translateY(-6px) translateX(6px); /* Move to the right */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
