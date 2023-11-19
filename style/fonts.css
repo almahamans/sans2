@@ -1,41 +1,53 @@
-.lSize{
+.lSize {
     font-weight: 600;
-    font-size: large;
+    font-size: 1.5rem; /* Large font size */
 }
-.label{
-    font: normal normal bold 15px Almarai;
+
+.label {
+    font: normal normal bold 15px 'Almarai', sans-serif; /* Use Almarai font and bold style */
 }
-.radLabel{
-    font: normal normal 15px Almarai;
+
+.radLabel {
+    font: normal normal 15px 'Almarai', sans-serif; /* Use Almarai font */
 }
-.medSizeFont{
-    font-size: 20px;
+
+.medSizeFont {
+    font-size: 1.25rem; /* Medium font size */
 }
-.sBoldSize{
-    font-size: smaller;
+
+.sBoldSize {
+    font-size: 0.75rem; /* Smaller font size with bold weight */
     font-weight: 600;
 }
-.sSizeFont{
-    font-size: 15px;
+
+.sSizeFont {
+    font-size: 0.9375rem; /* Small font size */
 }
-.whiteColor{
-color: white;
+
+.whiteColor {
+    color: rgb(3, 3, 3);
 }
-.lightblueColor{
+
+.lightblueColor {
     color: #3896DA;
 }
-.darkerBlueColor{
+
+.darkerBlueColor {
     color: #005EA4;
 }
-.ablueColor{
+
+.ablueColor {
     color: #3896DA;
 }
-.bgGrey{
-    background-color: #EAEFF5;
+
+.bgGrey {
+    background-color: #ffffff;
 }
-.veryDarkBlue{
+
+.veryDarkBlue {
     color: #0000FF;
 }
-.headerTable{
+
+.headerTable {
     background-color: #548DD4;
- } 
+}
