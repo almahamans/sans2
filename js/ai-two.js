@@ -103,3 +103,4 @@ function clearSuggestions() {
     suggestionsContainer.innerHTML = '';
 }
 
+
