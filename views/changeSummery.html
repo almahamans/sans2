@@ -13,14 +13,23 @@
 
 </head>
 <body>
-    <section style="display: flex; flex-direction: row; justify-content: space-around; background-color: #EAEFF5; color: black; font-size: 15px; font-weight: 600; border-radius: 5px; width: 50%; align-items: center; margin: 3% auto; padding: 5px;">
-        <span style="cursor: pointer;" onclick="window.location.href = 'main.html'">Home</span>
+    <section class="header-bar">
+        <span onclick="window.location.href = 'main.html'" style="cursor: pointer;">Home</span>
         <span style="cursor: pointer;">File</span>
         <span style="cursor: pointer;">Account</span>
-        <span style="cursor: pointer;"><img src="../icons/New folder/bell-solid.svg" class="imgWidth2" alt=""></span>
+        <span><img src="../icons/New folder/bell-solid.svg" style="cursor: pointer;" class="imgWidth2" alt=""></span>
         <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Sign up</span>
         <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Log out</span>
     </section>
+    <div style="display: flex; align-items: center;">
+        <label class="switch">
+            <input class="switch-input" type="checkbox" />
+            <span class="switch-label" data-on="On" data-off="Off"></span>
+            <span class="switch-handle"></span>
+        </label>
+        <img src="../img/darkLigImg.png" style="width: 50px; height: 50px; margin-left: 10px;">
+    </div>
+    
 
     <section id="tableHeader" style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 2%;">
         <img src="../img/logo.jpg" width="6%" height="5%" style="border: 1px solid black; margin-top: 13px;" alt="">
@@ -41,7 +50,7 @@
 
     <h1 class="veryDarkBlue" style="margin-left: 15%; margin-top: 8%; font-size: 25px;">Change Summery</h1> 
         <section class="rowFlex" style="gap: 10px;">
-        <section id="icons" class="imgSecStyle">
+            <div> <section id="icons" class="imgSecStyle">
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
             <img src="../icons/New folder/magnifying-glass-plus-solid.svg" class="imgWidth">
             <img src="../icons/New folder/pen-to-square-solid.svg" class="imgWidth">
@@ -51,7 +60,9 @@
             <img src="../icons/New folder/file-excel-solid.svg" class="imgWidth">
             <img src="../icons/New folder/file-export-solid.svg" class="imgWidth">
             <img src="../icons/New folder/file-pdf-solid.svg" class="imgWidth" id="pdf" style="cursor: pointer;">
-        </section>
+
+        </section></div>
+       
         <section style="display: flex; flex-direction: column; width: 80%; margin: auto;">
             <table style="margin-bottom: 3%;" >
             <tr>

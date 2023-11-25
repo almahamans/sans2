@@ -8,9 +8,23 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/fonts.css">
     <link rel="stylesheet" href="../style/bgSignup.css">
+    <style>
+        .animated-span {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: black; /* Adjust the text color */
+            transition: transform 0.3s ease-out;
+        }
+
+        .animated-span:hover {
+            transform: scale(1.1); /* Adjust the scaling factor as needed */
+        }
+    </style>
 </head>
 <body>
-    <section style="display: flex; flex-direction: row; justify-content: space-around; background-color: #EAEFF5; color: black; font-size: 15px; font-weight: 600; border-radius: 5px; width: 50%; align-items: center; margin: 3% auto -5% auto; padding: 5px;">
+    
+    <section class="header-bar">
         <span onclick="window.location.href = 'main.html'" style="cursor: pointer;">Home</span>
         <span style="cursor: pointer;">File</span>
         <span style="cursor: pointer;">Account</span>
@@ -18,12 +32,31 @@
         <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Sign up</span>
         <span style="cursor: pointer;" onclick="window.location.href = 'login.html'">Log out</span>
     </section>
+    
+    
+    <div style="display: flex; align-items: center;">
+        <label class="switch">
+            <input class="switch-input" type="checkbox" />
+            <span class="switch-label" data-on="On" data-off="Off"></span>
+            <span class="switch-handle"></span>
+        </label>
+        <img src="../img/darkLigImg.png" style="width: 50px; height: 50px; margin-left: 10px;">
+    </div>
+    
+        
+        
+        
+    
+    
 
+
+    
     <div class="bg-photo"></div>
     <section class="colFlex center padd">
-    <button id="ch-req" class="servicesBtn lSize whiteColor" style="margin-bottom: 2%;" onclick="window.location.href = 'changeReq.html'">Change Request</button>
-    <button id="w-sh" class="servicesBtn lSize whiteColor" style="margin-bottom: 2%;" onclick="window.location.href ='changeSummery.html'">Workshop</button>
-    <button id="re-ch" class="servicesBtn lSize whiteColor" style="margin-bottom: 2%;" onclick="window.location.href = 'receivedChanges.html'">Received Changes</button>
+        <button id="ch-req" class="servicesBtn lSize whiteColor" style="margin-bottom: 2%;" onclick="window.location.href = 'changeReq.html'">Change Request</button>
+        <button id="w-sh" class="servicesBtn lSize whiteColor" style="margin-bottom: 2%;" onclick="window.location.href ='changeSummery.html'">Workshop</button>
+        <button id="re-ch" class="servicesBtn lSize whiteColor" style="margin-bottom: 2%;" onclick="window.location.href = 'receivedChanges.html'">Received Changes</button>
+        <button id="re-ch" class="servicesBtn lSize whiteColor" style="margin-bottom: 2%;" onclick="window.location.href = 'receivedDocument.html'">SQE Review</button>
     </section>
 </body>
 </html>

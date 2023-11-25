@@ -1,6 +1,24 @@
 // Replace 'YOUR_OPENAI_API_KEY' with your actual OpenAI API key
 const apiKey = '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';
-//const apiKey = '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';
+
+// Mapping of hazard types 
+const consequencesSuggestions = {
+    'Fatigue': [
+        'Loss of separation'
+    ],
+    'Aircraft/Vehicle enter the runway without clearance': [
+        'Runway Incursion'
+    ],
+    'Unauthorized Maneuver on the Aerodrome': [
+        'Runway excursion'
+    ],
+    'Vehicles drivers not complying with the ground movement regulations (apron)': [
+        'Crossed Vehicle Ahead/behind'
+    ],
+    'FOD': [
+        'Damage to Aircrafts'
+    ]
+};
 
 // Mapping of hazard types to mitigations
 const mitigationSuggestions = {
@@ -32,35 +50,200 @@ const mitigationSuggestions = {
     ]
 };
 
+// Mapping of hazard types to Severity
+const SeveritySuggestions = {
+    'Fatigue': [
+        'Major Incident'
+    ],
+    'Aircraft/Vehicle enter the runway without clearance': [
+        'Major Incident'
+    ],
+    'Unauthorized Maneuver on the Aerodrome': [
+        'Major Incident'
+    ],
+    'Vehicles drivers not complying with the ground movement regulations (apron)': [
+        'Significant Incident'
+    ],
+    'FOD': [
+        'Significant Incident'
+    ]
+};
 
-// Event listener for changes in the Mitigation field
-document.getElementById('mitigation').addEventListener('input', handleMitigationInput);
+// Mapping of hazard types to Likelihood
+const LikelihoodSuggestions = {
+    'Fatigue': [
+        'Remote'
+    ],
+    'Aircraft/Vehicle enter the runway without clearance': [
+        'Remote'
+    ],
+    'Unauthorized Maneuver on the Aerodrome': [
+        'Remote'
+    ],
+    'Vehicles drivers not complying with the ground movement regulations (apron)': [
+        'Occasional'
+    ],
+    'FOD': [
+        'Occasional'
+    ]
+};
 
-function handleMitigationInput() {
+// Mapping of hazard types to Risk
+const RiskSuggestions = {
+    'Fatigue': [
+        'B3'
+    ],
+    'Aircraft/Vehicle enter the runway without clearance': [
+        'B3'
+    ],
+    'Unauthorized Maneuver on the Aerodrome': [
+        'B3'
+    ],
+    'Vehicles drivers not complying with the ground movement regulations (apron)': [
+        'C2'
+    ],
+    'FOD': [
+        'C2'
+    ]
+};
+
+// Mapping of hazard types to Severity Post
+const SeverityPostSuggestions = {
+    'Fatigue': [
+        'Major Incident'
+    ],
+    'Aircraft/Vehicle enter the runway without clearance': [
+        'Major Incident'
+    ],
+    'Unauthorized Maneuver on the Aerodrome': [
+        'Major Incident'
+    ],
+    'Vehicles drivers not complying with the ground movement regulations (apron)': [
+        'Significant Incident'
+    ],
+    'FOD': [
+        'Significant Incident'
+    ]
+};
+
+// Mapping of hazard types to Likelihood Post
+const LikelihoodPostSuggestions = {
+    'Fatigue': [
+        'Improbable'
+    ],
+    'Aircraft/Vehicle enter the runway without clearance': [
+        'Improbable'
+    ],
+    'Unauthorized Maneuver on the Aerodrome': [
+        'Improbable'
+    ],
+    'Vehicles drivers not complying with the ground movement regulations (apron)': [
+        'Improbable'
+    ],
+    'FOD': [
+        'Improbable'
+    ]
+};
+
+// Mapping of hazard types to Risk Post
+const RiskPostSuggestions = {
+    'Fatigue': [
+        'B4'
+    ],
+    'Aircraft/Vehicle enter the runway without clearance': [
+        'B4'
+    ],
+    'Unauthorized Maneuver on the Aerodrome': [
+        'B4'
+    ],
+    'Vehicles drivers not complying with the ground movement regulations (apron)': [
+        'C4'
+    ],
+    'FOD': [
+        'C4'
+    ]
+};
+
+// Event listeners for changes in different fields
+document.getElementById('mitigation').addEventListener('input', function () {
+    handleInput('mitigation', 'Mitigation');
+});
+
+document.getElementById('consequences').addEventListener('input', function () {
+    handleInput('consequences', 'Consequences');
+});
+
+document.getElementById('severity').addEventListener('input', function () {
+    handleInput('severity', 'Severity');
+});
+
+document.getElementById('likelihood').addEventListener('input', function () {
+    handleInput('likelihood', 'Likelihood');
+});
+
+document.getElementById('risk_class').addEventListener('input', function () {
+    handleInput('risk_class', 'Risk');
+});
+
+document.getElementById('severity_post').addEventListener('input', function () {
+    handleInput('severity_post', 'Severity Post');
+});
+
+document.getElementById('likelihood_post').addEventListener('input', function () {
+    handleInput('likelihood_post', 'Likelihood Post');
+});
+
+document.getElementById('risk_class_post').addEventListener('input', function () {
+    handleInput('risk_class_post', 'Risk Post');
+});
+
+function handleInput(inputId, inputType) {
     const hazardType = document.getElementById('hazard').value;
-    const mitigationInput = document.getElementById('mitigation').value.trim();
-    const firstTwoWords = mitigationInput.split(' ').slice(0, 2).join(' ');
+    const inputValue = document.getElementById(inputId).value.trim();
+    const firstTwoWords = inputValue.split(' ').slice(0, 2).join(' ');
 
-    if (hazardType && firstTwoWords.length >= 2) {
-        // Check if the first two words match the beginning of any suggestion
-        const matchingSuggestions = findMatchingSuggestions(hazardType, firstTwoWords);
-
-        // Display suggestions
-        displayMitigationSuggestions(matchingSuggestions);
-    } else {
-        // Clear suggestions if hazard type is not selected or less than two characters are entered
-        clearSuggestions();
-    }
+    const suggestionsContainer = document.getElementById('suggestions-container');
+    const matchingSuggestions = findMatchingSuggestions(hazardType, firstTwoWords, inputType);
+    displaySuggestions(matchingSuggestions, inputId, suggestionsContainer);
 }
 
-function findMatchingSuggestions(hazardType, prefix) {
+function findMatchingSuggestions(hazardType, prefix, inputType) {
     const matchingSuggestions = [];
+    let selectedArray;
 
-    const selectedMitigationArray = getMitigationArrayByType(hazardType);
+    switch (inputType) {
+        case 'Mitigation':
+            selectedArray = getMitigationArrayByType(hazardType);
+            break;
+        case 'Consequences':
+            selectedArray = getConsequencesArrayByType(hazardType);
+            break;
+        case 'Severity':
+            selectedArray = getSeveritySuggestionsArrayByType(hazardType);
+            break;
+        case 'Likelihood':
+            selectedArray = getLikelihoodSuggestionsArrayByType(hazardType);
+            break;
+        case 'Risk':
+            selectedArray = getRiskSuggestionsArrayByType(hazardType);
+            break;
+        case 'Severity Post':
+            selectedArray = getSeverityPostArrayByType(hazardType);
+            break;
+        case 'Likelihood Post':
+            selectedArray = getLikelihoodPostArrayByType(hazardType);
+            break;
+        case 'Risk Post':
+            selectedArray = getRiskPostSuggestionsArrayByType(hazardType);
+            break;
+        default:
+            // Default to mitigation if no specific type is provided
+            selectedArray = getMitigationArrayByType(hazardType);
+            break;
+    }
 
-    if (selectedMitigationArray) {
-        selectedMitigationArray.forEach((suggestion) => {
-            // Check if the suggestion includes the input prefix
+    if (selectedArray) {
+        selectedArray.forEach((suggestion) => {
             if (suggestion.toLowerCase().includes(prefix.toLowerCase())) {
                 matchingSuggestions.push(suggestion);
             }
@@ -74,8 +257,37 @@ function getMitigationArrayByType(hazardType) {
     return mitigationSuggestions[hazardType] || null;
 }
 
-function displayMitigationSuggestions(suggestions) {
-    const suggestionsContainer = document.getElementById('suggestions-container');
+function getConsequencesArrayByType(hazardType) {
+    return consequencesSuggestions[hazardType] || null;
+}
+
+function getSeveritySuggestionsArrayByType(hazardType) {
+    return SeveritySuggestions[hazardType] || null;
+}
+function getLikelihoodSuggestionsArrayByType(hazardType) {
+    return LikelihoodSuggestions[hazardType] || null;
+}
+function getRiskSuggestionsArrayByType(hazardType) {
+    return RiskSuggestions[hazardType] || null;
+}
+function getSeverityPostArrayByType(hazardType) {
+    return SeverityPostSuggestions[hazardType] || null;
+}
+function getLikelihoodPostArrayByType(hazardType) {
+    return LikelihoodPostSuggestions[hazardType] || null;
+}
+function getRiskPostSuggestionsArrayByType(hazardType) {
+    return RiskPostSuggestions[hazardType] || null;
+}
+
+// Add similar functions for other input types if needed
+
+
+function getMitigationArrayByType(hazardType) {
+    return mitigationSuggestions[hazardType] || null;
+}
+
+function displaySuggestions(suggestions, inputElement, suggestionsContainer) {
     suggestionsContainer.innerHTML = '';
 
     if (suggestions.length > 0) {
@@ -84,11 +296,11 @@ function displayMitigationSuggestions(suggestions) {
             const listItem = document.createElement('li');
             listItem.textContent = suggestion;
 
-            // Add click event listener to update Mitigation field when suggestion is clicked
+            // Add click event listener to update input field when suggestion is clicked
             listItem.addEventListener('click', () => {
-                console.log('Suggestion clicked:', suggestion);
-                document.getElementById('mitigation').value = suggestion;
-                clearSuggestions();
+                console.log('Suggestion clicked:', suggestion, inputElement);
+                document.getElementById(inputElement).value = suggestion;
+                clearSuggestions(suggestionsContainer);
             });
 
             suggestionsList.appendChild(listItem);
@@ -98,8 +310,6 @@ function displayMitigationSuggestions(suggestions) {
 }
 
 
-function clearSuggestions() {
-    const suggestionsContainer = document.getElementById('suggestions-container');
+function clearSuggestions(suggestionsContainer) {
     suggestionsContainer.innerHTML = '';
 }
-

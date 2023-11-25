@@ -1,5 +1,5 @@
 // Replace 'YOUR_OPENAI_API_KEY' with your actual OpenAI API key
-const apiKey = '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';
+const apiKey = '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';
 //const apiKey = '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';
 
 // Mapping of hazard types to mitigations
@@ -34,11 +34,11 @@ const mitigationSuggestions = {
 
 
 // Event listener for changes in the Mitigation field
-document.getElementById('mitigation2').addEventListener('input', handleMitigationInput);
+document.getElementById('consequences').addEventListener('input', handleMitigationInput);
 
 function handleMitigationInput() {
-    const hazardType = document.getElementById('hazard2').value;
-    const mitigationInput = document.getElementById('mitigation2').value.trim();
+    const hazardType = document.getElementById('hazard').value;
+    const mitigationInput = document.getElementById('consequences').value.trim();
     const firstTwoWords = mitigationInput.split(' ').slice(0, 2).join(' ');
 
     if (hazardType && firstTwoWords.length >= 2) {
@@ -75,7 +75,7 @@ function getMitigationArrayByType(hazardType) {
 }
 
 function displayMitigationSuggestions(suggestions) {
-    const suggestionsContainer = document.getElementById('suggestions-container2');
+    const suggestionsContainer = document.getElementById('suggestions-container');
     suggestionsContainer.innerHTML = '';
 
     if (suggestions.length > 0) {
@@ -87,7 +87,7 @@ function displayMitigationSuggestions(suggestions) {
             // Add click event listener to update Mitigation field when suggestion is clicked
             listItem.addEventListener('click', () => {
                 console.log('Suggestion clicked:', suggestion);
-                document.getElementById('mitigation2').value = suggestion;
+                document.getElementById('consequences').value = suggestion;
                 clearSuggestions();
             });
 
@@ -99,7 +99,8 @@ function displayMitigationSuggestions(suggestions) {
 
 
 function clearSuggestions() {
-    const suggestionsContainer = document.getElementById('suggestions-container2');
+    const suggestionsContainer = document.getElementById('suggestions-container');
     suggestionsContainer.innerHTML = '';
 }
+
 
